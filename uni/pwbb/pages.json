@@ -1,13 +1,16 @@
 {
 	"pages": [{
-		"path": "pages/index/index",
+		"path": "pages/index/index"
+	},
+	{
+		"path": "pages/profile/profile",
 		"style": {
 			"navigationStyle": "custom"
 		}
 	}],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
-		"navigationBarTitleText": "uni-app",
+		"navigationBarTitleText": "陪玩报备",
 		"navigationBarBackgroundColor": "#F8F8F8",
 		"backgroundColor": "#F8F8F8",
 		"app-plus": {

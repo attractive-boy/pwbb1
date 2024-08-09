@@ -1,5 +1,23 @@
 @import '@/uni_modules/uni-scss/variables.scss';
+@import "@/uni_modules/uview-ui/theme.scss";  
+@import "@/uni_modules/uview-ui/index.scss";
+/* 在线链接服务仅供平台体验和调试使用，平台不承诺服务的稳定性，企业客户需下载字体包自行发布使用并做好备份。 */
+@font-face {
+  font-family: 'eosfont';  /* Project id 4648096 */
+  src: url('//at.alicdn.com/t/c/font_4648096_jio6a75yhmf.woff2?t=1723168699281') format('woff2'),
+       url('//at.alicdn.com/t/c/font_4648096_jio6a75yhmf.woff?t=1723168699281') format('woff'),
+       url('//at.alicdn.com/t/c/font_4648096_jio6a75yhmf.ttf?t=1723168699281') format('truetype');
+}
+
+.eosfont {
+  font-family:"eosfont" !important;
+  font-size:16px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
 :root {
-  --img-more:'https://static-package.peiwan.tv/img/gamelogo/new/more.png?imageView2/1/interlace/1/ignore-error/1/w/91/format/jpg'
+  --img-my-card: url('https://static-package.peiwan.tv/theme/default/img/common/msgBg.png');
+
 }

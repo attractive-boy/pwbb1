@@ -1,7 +1,7 @@
 // scripts/insertSwipers.js
 const { Sequelize, DataTypes } = require('sequelize');
 const sequelize = require('../db'); // 导入 Sequelize 实例
-const Swiper = require('../models/Swiper'); // 导入 Swiper 模型
+const Swiper = require('../models/swiper'); // 导入 Swiper 模型
 
 const data = {
   "status": 1,
