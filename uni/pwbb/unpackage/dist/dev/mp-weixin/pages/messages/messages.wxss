@@ -1,0 +1,114 @@
+
+.messages-view-meum.data-v-ac5467f4 {
+	background-color: white;
+	padding-top: 3vw;
+	padding-bottom: 3vw;
+}
+.profile-view-navbar-title.data-v-ac5467f4 {
+
+	text-align: center;
+	font-size: 4vw;
+	font-weight: 600;
+	align-self: center;
+	display: flex;
+	/* 水平居中 */
+	justify-content: center;
+	align-items: center;
+	margin-left: 2vw;
+	margin-right: 2vw;
+}
+.profile-view-refresh.data-v-ac5467f4 {
+	margin-left: 2vw;
+}
+.profile-view-money.data-v-ac5467f4 {
+	margin-right: 2vw;
+}
+.profile-view-navbar-center.data-v-ac5467f4 {
+	width: 100%;
+	display: flex;
+	/* 水平居中 */
+	justify-content: center;
+}
+.profile-view-navbar-title-icon.data-v-ac5467f4 {
+	width: 4vw;
+	height: 4vw;
+	margin-left: 2vw;
+	background-color: #dbdbdb;
+	padding: 1vw;
+	border-radius: 50%;
+}
+.messages-view-meum-image.data-v-ac5467f4 {
+	width: 15vw;
+	height: 15vw;
+}
+.grid-text.data-v-ac5467f4 {
+	font-size: 3.5vw;
+	color: black;
+	margin-top: 2vw;
+}
+.messages-view-chat.data-v-ac5467f4 {
+	background-color: white;
+	margin-top: 3vw;
+	padding: 2vw;
+}
+.messages-view-chat-card.data-v-ac5467f4 {
+	display: flex;
+	align-items: center;
+	background-color: #ffffff;
+}
+.chat-avatar.data-v-ac5467f4 {
+	width: 13vw;
+	height: 13vw;
+	border-radius: 1vw;
+	margin-right: 2vw;
+}
+.chat-info.data-v-ac5467f4 {
+	flex: 1;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	height: 13vw;
+}
+.chat-name.data-v-ac5467f4 {
+	font-size: 4vw;
+	font-weight: bold;
+}
+.chat-last-msg.data-v-ac5467f4 {
+	font-size: 3.5vw;
+	color: #666;
+	margin-top: 1vw;
+	text-wrap: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	width: 60vw;
+}
+.chat-time.data-v-ac5467f4 {
+	font-size: 3vw;
+	color: #999;
+}
+.messages-view-chat-warn.data-v-ac5467f4 {
+	display: inline-block;
+	text-wrap: nowrap;
+	font-size: 3vw;
+	color: red;
+	background-color: #F2F2F2;
+	padding: 1vw 5vw;
+	margin-left: 50%;
+	margin-bottom: 3vw;
+	-webkit-transform: translateX(-50%);
+	        transform: translateX(-50%);
+	border-radius: 5vw;
+}
+.index-image-play-sex.data-v-ac5467f4 {
+	width: 4vw;
+	height: 4vw;
+	margin-left: 1vw;
+}
+.chat-info-message.data-v-ac5467f4{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 13vw;
+}
+

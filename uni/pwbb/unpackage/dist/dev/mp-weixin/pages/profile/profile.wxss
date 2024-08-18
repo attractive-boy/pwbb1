@@ -1,0 +1,187 @@
+
+.profile-view-navbar-title {
+
+	text-align: center;
+	font-size: 4vw;
+	font-weight: 600;
+	align-self: center;
+}
+.profile-view-refresh {
+	margin-left: 2vw;
+}
+.profile-view-money {
+	margin-right: 2vw;
+}
+.profile-view-navbar-center {
+	width: 100%;
+	display: flex;
+	/* 水平居中 */
+	justify-content: center;
+}
+.profile-view-content-item-left-img {
+	display: flex;
+	align-items: center;
+}
+.profile-view-content-item-left-text-name {
+	font-size: 4vw;
+	font-weight: 600;
+}
+.profile-view-content-item-left-text-id {
+	font-size: 3vw;
+	color: #636363;
+}
+.profile-view-content-item-left-text {
+	margin-left: 3vw;
+}
+.profile-view-content-item-right {
+	margin-left: 3vw;
+}
+.profile-view-content-item-left {
+	display: flex;
+	align-items: center;
+	margin-top: 4vw;
+}
+.profile-view-content-item {
+	padding: 3vw;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+}
+.profile-view-content {
+	background-image: url('https://static-package.peiwan.tv/theme/default/img/common/msgBg.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.profile-view-content-item-left-level1 {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	margin-top: 2vw;
+	width: 60vw;
+}
+.profile-view-content-item-left-level2 {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	margin-top: 2vw;
+	width: 60vw;
+}
+.profile-view-content {
+	position: relative;
+}
+.profile-view-content-uid {
+	position: absolute;
+	right: 0;
+	top: 0;
+	height: 4vw;
+	line-height: 4vw;
+	font-size: 4vw;
+	padding: 1vw 2vw;
+	color: #fff;
+	background-color: #14a6e0;
+	border-bottom-left-radius: 2vw;
+}
+.profile-image-progress-icon {
+	width: 3vw;
+	height: 3vw;
+	margin-right: 1vw;
+	display: inline-block;
+}
+.profile-view-content-money{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	margin-top: 2vw;
+	padding-bottom: 3vw;
+	width: 100vw;
+	/* space-around */
+	justify-content: space-around;
+}
+.profile-view-content-money-item-text{
+	font-size: 3vw;
+	color: #999;
+	/* 水平居中 */
+	align-items: center;
+}
+.profile-view-content-money-icon{
+	width: 3vw;
+	height: 3vw;
+	margin-right: 1vw;
+	display: inline-block;
+}
+.profile-view-content-money-text-value{
+	font-size: 3vw;
+	color: #636363;
+}
+.profile-view-content-money-item-num{
+	font-size: 5vw;
+	color: #000;
+	padding-bottom: 1vw;
+	font-family: DINAlternate-Bold, DINAlternate;
+	font-weight: 700;
+	align-items: center;
+}
+.profile-view-content-money-icon{
+	width: 3vw;
+	height: 3vw;
+	margin-right: 1vw;
+	display: inline-block;
+}
+.profile-view-content-money-text-value{
+	font-size: 3vw;
+	color: #636363;
+}
+.profile-view-content-money-item{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	width: 33.33%;
+}
+.profile-view-content-money-item:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 1px;
+  height: 60%;
+  background-color: #ccc; /* 分割线颜色 */
+}
+.profile-view-function{
+
+	margin-top: 2vw;
+	width: 94vw;
+	margin-left: 3vw;
+	border-radius: 2vw;
+	background-color: #fff;
+	padding: 2vw 0;
+	margin-bottom: 3vw;
+}
+.profile-view-function-title_text{
+	font-size: 4vw;
+	font-weight: 700;
+	margin-left: 4vw;
+	margin-top: 4vw;
+}
+.profile-view-function-grid-item{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 25%;
+	padding-top: 4vw;
+}
+.profile-view-function-grid-item .text{
+	font-size: 3.5vw;
+	margin-top: 2vw;
+	/* 水平居中 */
+	text-align: center;
+}
+
+
+

@@ -1,0 +1,14 @@
+
+.discover-cell-group {
+	margin-top: 3vw;
+	background-color: white;
+}
+ .u-cell-group{
+	margin-top: 3vw;
+	background-color: white;
+}
+.view-image-cellicon{
+	width: 26px;
+	height: 26px;
+}
+

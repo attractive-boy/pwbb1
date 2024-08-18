@@ -3,7 +3,7 @@
 		<view class="container">
 			<view class="index-view-searchbar">
 				<uni-search-bar class="index-bar-find" radius="100" placeholder="搜索游戏名,昵称,车牌号" clearButton="none"
-					cancelButton="none" @confirm="search" />
+					cancelButton="none" @confirm="search" @focus="focus" />
 				<view class="index-view-call">
 					<uni-icons fontFamily="eosfont" :size="26" color="#5D6BFE">{{'&#xe6b9'}}</uni-icons>
 					<text>呼叫陪练师</text>
@@ -78,8 +78,8 @@
 					<view class="index-view-player-right-top">
 						<view style="display: flex; align-items: center;">
 							<text class="index-view-player-right-top-name"
-							      style="font-size: large; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 30vw;">
-							  {{ item.nickname }}
+								style="font-size: large; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 30vw;">
+								{{ item.nickname }}
 							</text>
 							<image class="index-image-play-sex" v-if="item.sex==2"
 								src="https://static-package.peiwan.tv/theme/default/img/common/sex_2.png"
@@ -91,7 +91,7 @@
 						<view class="index-view-player-right-top-hot">
 							<image src="https://static-package.peiwan.tv/theme/default/img/common/hot.png"
 								class="index-image-play-hot" />
-							<text class="index-view-player-right-top-hot-text">{{formatExp(item.exp)}}</text>
+							<text class="index-view-player-right-top-hot-text">热度 {{formatExp(item.exp)}}</text>
 						</view>
 					</view>
 
@@ -133,6 +133,11 @@
 		methods: {
 			search(e) {
 
+			},
+			focus(e) {
+				uni.navigateTo({
+					url: '/pages/search/search'
+				})
 			},
 			change(e) {
 				this.current = e.detail.current

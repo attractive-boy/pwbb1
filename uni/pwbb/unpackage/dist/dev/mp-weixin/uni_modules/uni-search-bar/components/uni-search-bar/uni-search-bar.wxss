@@ -230,9 +230,20 @@
   -webkit-appearance: none;
   background: transparent;
 }
-:root {
-  --img-more:'https://static-package.peiwan.tv/img/gamelogo/new/more.png?imageView2/1/interlace/1/ignore-error/1/w/91/format/jpg'
-;
+@font-face {
+  font-family: 'eosfont';
+  /* Project id 4648096 */
+  src: url("//at.alicdn.com/t/c/font_4648096_guu8ekmotpg.woff2?t=1723823253223") format("woff2"), url("//at.alicdn.com/t/c/font_4648096_guu8ekmotpg.woff?t=1723823253223") format("woff"), url("//at.alicdn.com/t/c/font_4648096_guu8ekmotpg.ttf?t=1723823253223") format("truetype");
+}
+.eosfont {
+  font-family: "eosfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.safe-navbar {
+  padding-top: 25px;
 }
 .uni-searchbar {
   display: flex;

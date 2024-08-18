@@ -1,0 +1,77 @@
+
+.login-view-main {
+	background-color: white;
+	height: 100vh;
+}
+.profile-view-navbar-title {
+
+	text-align: center;
+	font-size: 4vw;
+	font-weight: 600;
+	align-self: center;
+}
+.profile-view-refresh {
+	margin-left: 2vw;
+}
+.profile-view-money {
+	margin-right: 2vw;
+}
+.profile-view-navbar-center {
+	width: 100%;
+	display: flex;
+	/* 水平居中 */
+	justify-content: center;
+}
+.login-view-agree {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 20vw;
+}
+.login-view-agree-text-info {
+	color: #007AFF;
+}
+.login-view-agree-text {
+	margin-left: 2vw;
+}
+.login-view-checkbox {
+	margin-left: 2vw;
+}
+.login-view-login {
+	margin-top: 10vw;
+	text-align: right;
+	color: #007AFF;
+	width: 80vw;
+	font-size: large;
+}
+.login-view-login-btn {
+	background: linear-gradient(#3c6, #56df88);
+	font-size: 4vw;
+	margin: 10vw;
+	width: 80vw;
+	color: white;
+}
+.login-view-checkbox-group {
+	margin-top: 5vw;
+}
+.login-view-login-warn {
+	display: block;
+	/* font-weight: bold; */
+	font-size: large;
+	color: #ff0000;
+	margin: 10vw;
+	width: 80vw;
+	text-align: center;
+}
+.login-view-loginwx{
+	display: flex;
+	justify-content: space-around;
+	/* 间距 */
+	margin-top: 5vw;
+	font-size: large;
+}
+.login-view-loginwx .u-button{
+	border-radius: 2vw;
+	height: 10vw;
+}
+

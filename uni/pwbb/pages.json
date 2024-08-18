@@ -1,20 +1,76 @@
 {
-	"pages": [{
-		"path": "pages/index/index"
-	},
-	{
-		"path": "pages/profile/profile",
-		"style": {
-			"navigationStyle": "custom"
-		}
-	}],
-	"globalStyle": {
-		"navigationBarTextStyle": "black",
-		"navigationBarTitleText": "陪玩报备",
-		"navigationBarBackgroundColor": "#F8F8F8",
-		"backgroundColor": "#F8F8F8",
-		"app-plus": {
-			"background": "#efeff4"
-		}
-	}
+  "pages": [
+    {
+      "path": "pages/index/index"
+    },
+    {
+      "path": "pages/profile/profile",
+      "style": {
+        "navigationBarTitleText": "陪玩报备"
+      }
+    },
+    {
+      "path": "pages/discover/discover",
+      "style": {
+        "navigationBarTitleText": "发现"
+      }
+    },
+    {
+      "path": "pages/login/login",
+      "style": {
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/messages/messages",
+      "style": {
+        "navigationBarTitleText": ""
+      }
+    },
+    {
+    	"path" : "pages/search/search",
+    	"style" : 
+    	{
+    		"navigationBarTitleText" : ""
+    	}
+    }
+  ],
+  "tabBar": {
+    "custom": true,  // 启用自定义 tabBar
+    "color": "#999999",
+    "selectedColor": "#333333",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页"
+
+      },
+      {
+        "pagePath": "pages/discover/discover",
+        "text": "发现"
+
+      },
+      {
+        "pagePath": "pages/messages/messages",
+        "text": "消息"
+
+      },
+      {
+        "pagePath": "pages/profile/profile",
+        "text": "我的"
+
+      }
+    ]
+  },
+  "globalStyle": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "陪玩报备",
+    "navigationBarBackgroundColor": "#F8F8F8",
+    "backgroundColor": "#F8F8F8",
+    "app-plus": {
+      "background": "#efeff4"
+    }
+  }
 }

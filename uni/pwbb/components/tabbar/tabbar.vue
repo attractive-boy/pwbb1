@@ -1,62 +1,33 @@
 <template>
-	<u-tabbar
-		:value="value6"
-		@change="handleTabChange"
-		:fixed="true"
-		:placeholder="true"
-		:safeAreaInsetBottom="true"
-	>
-		<u-tabbar-item text="首页">
-		        <image
-		            class="u-page__item__slot-icon"
-		            slot="active-icon"
-		            src="https://static-package.peiwan.tv/theme/default/img/common/footer/home-cur.png"
-		        ></image>
-		        <image
-		            class="u-page__item__slot-icon"
-		            slot="inactive-icon"
-		            src="https://static-package.peiwan.tv/theme/default/img/common/footer/home.png"
-		        ></image>
-		    </u-tabbar-item>
-		    
-		    <u-tabbar-item text="发现">
-		        <image
-		            class="u-page__item__slot-icon"
-		            slot="active-icon"
-		            src="https://static-package.peiwan.tv/theme/default/img/common/footer/found-cur.png"
-		        ></image>
-		        <image
-		            class="u-page__item__slot-icon"
-		            slot="inactive-icon"
-		            src="https://static-package.peiwan.tv/theme/default/img/common/footer/found.png"
-		        ></image>
-		    </u-tabbar-item>
-		    
-		    <u-tabbar-item text="消息">
-		        <image
-		            class="u-page__item__slot-icon"
-		            slot="active-icon"
-		            src="https://static-package.peiwan.tv/theme/default/img/common/footer/msg-cur.png"
-		        ></image>
-		        <image
-		            class="u-page__item__slot-icon"
-		            slot="inactive-icon"
-		            src="https://static-package.peiwan.tv/theme/default/img/common/footer/msg.png"
-		        ></image>
-		    </u-tabbar-item>
-		    
-		    <u-tabbar-item text="我的">
-		        <image
-		            class="u-page__item__slot-icon"
-		            slot="active-icon"
-		            src="https://static-package.peiwan.tv/theme/default/img/common/footer/my-cur.png"
-		        ></image>
-		        <image
-		            class="u-page__item__slot-icon"
-		            slot="inactive-icon"
-		            src="https://static-package.peiwan.tv/theme/default/img/common/footer/my.png"
-		        ></image>
-		    </u-tabbar-item>
+	<u-tabbar :value="currentTab" @change="handleTabChange" :fixed="true" :placeholder="true"
+		:safeAreaInsetBottom="true">
+		<u-tabbar-item text="首页" :url="'/pages/index/index'">
+			<image class="u-page__item__slot-icon" slot="active-icon"
+				src="https://static-package.peiwan.tv/theme/default/img/common/footer/home-cur.png"></image>
+			<image class="u-page__item__slot-icon" slot="inactive-icon"
+				src="https://static-package.peiwan.tv/theme/default/img/common/footer/home.png"></image>
+		</u-tabbar-item>
+
+		<u-tabbar-item text="发现" :url="'/pages/discover/discover'">
+			<image class="u-page__item__slot-icon" slot="active-icon"
+				src="https://static-package.peiwan.tv/theme/default/img/common/footer/found-cur.png"></image>
+			<image class="u-page__item__slot-icon" slot="inactive-icon"
+				src="https://static-package.peiwan.tv/theme/default/img/common/footer/found.png"></image>
+		</u-tabbar-item>
+
+		<u-tabbar-item text="消息" :url="'/pages/messages/messages'">
+			<image class="u-page__item__slot-icon" slot="active-icon"
+				src="https://static-package.peiwan.tv/theme/default/img/common/footer/msg-cur.png"></image>
+			<image class="u-page__item__slot-icon" slot="inactive-icon"
+				src="https://static-package.peiwan.tv/theme/default/img/common/footer/msg.png"></image>
+		</u-tabbar-item>
+
+		<u-tabbar-item text="我的" :url="'/pages/profile/profile'">
+			<image class="u-page__item__slot-icon" slot="active-icon"
+				src="https://static-package.peiwan.tv/theme/default/img/common/footer/my-cur.png"></image>
+			<image class="u-page__item__slot-icon" slot="inactive-icon"
+				src="https://static-package.peiwan.tv/theme/default/img/common/footer/my.png"></image>
+		</u-tabbar-item>
 	</u-tabbar>
 </template>
 
@@ -64,37 +35,53 @@
 	export default {
 		data() {
 			return {
-				value6: 0
-			}
+				currentTab: 0
+			};
 		},
 		methods: {
-			handleTabChange(name) {
-				// 根据选中的 tab 值跳转到不同的页面
-				switch (name) {
-					case 0:
-						uni.switchTab({ url: '/pages/index/index' }); // 跳转到首页
-						break;
-					case 1:
-						uni.switchTab({ url: '/pages/discover/discover' }); // 跳转到发现页
-						break;
-					case 2:
-						uni.navigateTo({ url: '/pages/messages/messages' }); // 跳转到消息页
-						break;
-					case 3:
-						uni.navigateTo({ url: '/pages/profile/profile' }); // 跳转到我的页
-						break;
-					default:
-						break;
-				}
+			handleTabChange(index) {
+				this.currentTab = index;
+				const tabPaths = [
+					'/pages/index/index',
+					'/pages/discover/discover',
+					'/pages/messages/messages',
+					'/pages/profile/profile'
+				];
+				uni.switchTab({
+					url: tabPaths[index],
+					success(res) {
+						this.changeCurrentTab();
+					}
+				});
+			},
+			changeCurrentTab(){
+				uni.getSystemInfo({
+					success: (res) => {
+						const pages = getCurrentPages();
+						const currentPage = pages[pages.length - 1];
+						const url = currentPage.route;
+						const tabPaths = [
+							'/pages/index/index',
+							'/pages/discover/discover',
+							'/pages/messages/messages',
+							'/pages/profile/profile'
+						];
+						console.log('tabbar加载==>', url);
+						this.currentTab = tabPaths.indexOf('/' + url);
+					}
+				});
 			}
+		},
+		
+		mounted() {
+			this.changeCurrentTab();
 		}
-	}
+	};
 </script>
 
-<style>
-	.u-page__item__slot-icon{
+<style scoped>
+	.u-page__item__slot-icon {
 		width: 6vw;
 		height: 6vw;
-		
 	}
 </style>
