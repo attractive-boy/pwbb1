@@ -1,5 +1,5 @@
 <template>
-	<view>
+	<view style="height: 100vh;overflow-y: scroll;" @scroll="onScroll">
 		<view class="container">
 			<view class="index-view-searchbar">
 				<uni-search-bar class="index-bar-find" radius="100" placeholder="搜索游戏名,昵称,车牌号" clearButton="none"
@@ -23,21 +23,23 @@
 			</uni-swiper-dot>
 			<uni-grid :column="5" :show-border="false" :square="false" @change="change">
 				<uni-grid-item v-for="(item ,index) in list" :index="index" :key="index">
-					<view class="grid-item-box">
+					<view class="grid-item-box" @click="toGameInfo(item.id)">
 						<image class="index-image-game-icon" :src="item.icon" mode="aspectFill" />
 						<text class="text">{{item.name}}</text>
 					</view>
 				</uni-grid-item>
 				<uni-grid-item>
-					<view class="grid-item-box">
-						<image class="index-image-game-icon" :src="img_more" mode="aspectFill" />
+					<view class="grid-item-box" @click="moreGame">
+						<image class="index-image-game-icon"
+							src="https://static-package.peiwan.tv/img/gamelogo/new/more.png?imageView2/1/interlace/1/ignore-error/1/w/91/format/jpg"
+							mode="aspectFill" />
 						<text class="text">更多品类</text>
 					</view>
 				</uni-grid-item>
 			</uni-grid>
 			<br />
 			<view class="index-card-call">
-				<image :src="img_robot"></image>
+				<image src="https://static-package.peiwan.tv/theme/default/img/common/robot.png"></image>
 				<view class="index-card-title">
 					<text class="index-card-main">快速派单，极速响应</text>
 					<text class="index-card-sub">给陪陪推送提醒，顾客每日12次<text
@@ -46,21 +48,23 @@
 				<button type="primary" class="index-card-button">呼叫陪练师</button>
 			</view>
 			<view class="tag-view">
-				<u-tabs :list="list1" @click="tabclick">
-					<view slot="right" @tap="$u.toast('插槽被点击')" class="index-view-tag-right">
+				<u-tabs :list="list1" @click="tabclick" :current="tabIndex">
+					<view slot="right" @tap="showgames = true" class="index-view-tag-right">
 						<text>更多</text>
 					</view>
 				</u-tabs>
 			</view>
 		</view>
+
 		<view class="index-view-player">
 			<view class="index-view-player-header">
 				<text style="font-size: large;">推荐大神</text>
-				<view class="index-view-player-header-filter">
+				<view class="index-view-player-header-filter" @click="show = true">
 					<uni-icons fontFamily="eosfont" :size="18" color="#999">{{'&#xe611'}}</uni-icons>
 					<text style="margin-left: 10px;font-size: 3vw;color:#999;">性别</text>
 				</view>
 			</view>
+
 			<view class="index-view-player-item" v-for="(item,index) in list2" :key="index">
 				<view class="index-view-player-left">
 					<image class="index-image-player-avatar" :src="item.avatar" mode="aspectFill" />
@@ -71,7 +75,7 @@
 						<image class="index-image-play-voice-center"
 							src="https://static-package.peiwan.tv/theme/default/img/common/wave.png" mode="aspectFit" />
 
-						<text style="margin-left: 2vw;">{{item.voice.len}}''</text>
+						<text style="margin-left: 2vw;">{{item.voice && item.voice.len}}''</text>
 					</view>
 				</view>
 				<view class="index-view-player-right">
@@ -102,19 +106,41 @@
 
 				</view>
 			</view>
+
 		</view>
-		<tabbar></tabbar>
+
+		<tabbar :currentTab="0"></tabbar>
+		<u-popup :show="show" mode="bottom" @close="close">
+			<view>
+				<view class="index-view-sex-select-title">性别筛选</view>
+				<view class="index-view-sex-select">
+					<view class="index-view-sex-select-item"
+						:class="sex == 0 ? 'index-view-sex-select-item-active' : ''" @click="sex = 0">不限</view>
+					<view class="index-view-sex-select-item"
+						:class="sex == 1 ? 'index-view-sex-select-item-active' : ''" @click="sex = 1">男生</view>
+					<view class="index-view-sex-select-item"
+						:class="sex == 2 ? 'index-view-sex-select-item-active' : ''" @click="sex = 2">女生</view>
+				</view>
+				<u-button text="确定" shape="circle" color="linear-gradient(270deg,#79D7FA 0,#5A93F6 100%)"
+					class="index-view-sex-select-confirm" @click="selectSex"></u-button>
+			</view>
+		</u-popup>
+		<u-modal :show="showgames" mode="center" title="游戏选择" @close="showgames = false" :showConfirmButton="false" :closeOnClickOverlay="true" >
+			<view class="index-view-games">
+				<view class="index-view-games-item" v-for="(item,index) in list1" :key="index">
+					<u-tag :text="item.name"  plain size="large" @click="selectgame(item.id)"
+					:icon="item.icon"></u-tag>
+				</view>
+			</view>
+			
+		</u-modal>
 	</view>
 </template>
 
 <script>
 	import {
 		rq
-	} from '../../utils/api.js';
-	import {
-		img_more,
-		img_robot
-	} from '../../utils/config.js'
+	} from '../../utils/api.js'
 	export default {
 		data() {
 			return {
@@ -122,12 +148,15 @@
 				current: 0,
 				mode: 'round',
 				list: [],
-				img_more: img_more,
-				img_robot: img_robot,
 				list1: [],
 				perPage: 10,
 				page: 1,
-				list2: []
+				list2: [],
+				show: false,
+				sex: 0,
+				type: 1,
+				showgames: false,
+				tabIndex: 0
 			}
 		},
 		methods: {
@@ -160,18 +189,29 @@
 					id: res[0].id
 				})
 			},
-			async tabclick(e) {
+			tabclick(e) {
 				console.log("tab==>", e)
+				this.type = e.id
+				this.fetchUser(true)
+			},
+			async fetchUser(flag) {
+				if (flag) {
+					this.page = 1
+					this.list2 = []
+				} else {
+					this.page++
+				}
 				const res = await rq({
 					url: '/peiwan',
 					method: 'GET',
 					data: {
 						page: this.page,
 						perPage: this.perPage,
-						type: e.id
+						type: this.type,
+						sex: this.sex
 					}
 				})
-				this.list2 = res.data.map(item => {
+				this.list2 = [...this.list2, ...res.data.map(item => {
 					if (item.voice) {
 						try {
 							item.voice = JSON.parse(item.voice);
@@ -180,7 +220,7 @@
 						}
 					}
 					return item;
-				});
+				})]
 			},
 			formatExp(value) {
 				if (value >= 10000) {
@@ -193,10 +233,46 @@
 					// 否则直接返回原始值
 					return value;
 				}
+			},
+			moreGame() {
+				uni.navigateTo({
+					url: '/pages/gamelist/gamelist'
+				})
+			},
+			close() {
+				this.show = false
+			},
+			selectSex() {
+				this.show = false
+				this.fetchUser(true)
+			},
+			onScroll() {
+				//触底查看
+				const dom = uni.createSelectorQuery().select('.index-view-player');
+				dom.boundingClientRect(data => {
+					// console.log(data)
+					if (data && data.bottom <= uni.getSystemInfoSync().windowHeight) {
+						this.fetchUser(false)
+					}
+				}).exec();
+			},
+				
+			selectgame(index){
+				this.tabIndex = index - 1
+				this.tabclick({
+					id: index
+				})
+				this.showgames = false
+			},
+			toGameInfo(id){
+				uni.navigateTo({
+					url: '/pages/gameinfo/gameinfo?id=' + id
+				})
 			}
 		},
+
 		mounted() {
-			this.loadSwiper();
+			this.loadSwiper()
 			this.loadGames()
 		}
 	}
@@ -414,12 +490,15 @@
 		margin-left: 1vw;
 		margin-top: 2vw;
 		padding: 4vw;
+		padding-right: 0;
+		width: 100%;
 	}
 
 	.index-view-player-right-top {
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
+		width: 100%;
 	}
 
 	.index-image-play-sex {
@@ -448,10 +527,9 @@
 
 	.index-view-player-item {
 		display: flex;
-
+		position: relative;
 		flex-direction: row;
 		justify-content: space-between;
-		margin-top: 2vw;
 	}
 
 	.index-view-player-right-bottom-summary {
@@ -474,6 +552,8 @@
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
+		position: absolute;
+		right: -5vw;
 	}
 
 	.index-image-play-hot {
@@ -489,5 +569,61 @@
 		/* 垂直居中 */
 		align-items: center;
 		margin-left: 1vw;
+		width: 20vw;
+		float: right;
+	}
+
+	.index-view-sex-select-title {
+		width: 100%;
+		height: 16vw;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-size: 4vw;
+		font-weight: 700;
+	}
+
+	.index-view-sex-select {
+		width: 100%;
+		height: 16vw;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-around;
+	}
+
+	.index-view-sex-select-item {
+		width: 26vw;
+		height: 10vw;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-color: #F5F5F5;
+		border-radius: 5vw;
+		font-size: 4vw;
+		font-weight: 700;
+	}
+
+	.index-view-sex-select-confirm {
+		width: 80vw;
+		margin: 5vw auto;
+	}
+
+	.index-view-sex-select-item-active {
+		border: 1px solid #5A94F6;
+		color: #5A94F6;
+	}
+	.index-view-games{
+		/* 一排两个 */
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: flex-start;
+		max-height: 40vh;
+		padding-bottom: 5vh;
+		overflow-y: auto;
+	}
+	.index-view-games-item{
+		width: 30vw;
+		margin: 1vw 3vw;
 	}
 </style>

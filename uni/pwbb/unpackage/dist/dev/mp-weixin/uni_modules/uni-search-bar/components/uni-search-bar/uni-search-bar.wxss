@@ -242,9 +242,6 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-.safe-navbar {
-  padding-top: 25px;
-}
 .uni-searchbar {
   display: flex;
   flex-direction: row;

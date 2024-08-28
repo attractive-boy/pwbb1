@@ -164,7 +164,7 @@
 			</uni-grid>
 		</view>
 		<view style="height: 3vw;"></view>
-		<tabbar></tabbar>
+		<tabbar :currentTab="3"></tabbar>
 	</view>
 </template>
 

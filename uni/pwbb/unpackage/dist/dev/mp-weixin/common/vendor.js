@@ -1557,7 +1557,7 @@ function initData(vueOptions, context) {
     try {
       data = data.call(context); // 支持 Vue.prototype 上挂的数据
     } catch (e) {
-      if (Object({"NODE_ENV":"development","VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"陪玩报备","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
+      if (Object({"VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"陪玩报备","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
         console.warn('根据 Vue 的 data 函数初始化小程序 data 失败，请尽量确保 data 函数中不访问 vm 对象，否则可能影响首次数据渲染速度。', data);
       }
     }
@@ -8923,7 +8923,7 @@ function type(obj) {
 
 function flushCallbacks$1(vm) {
     if (vm.__next_tick_callbacks && vm.__next_tick_callbacks.length) {
-        if (Object({"NODE_ENV":"development","VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"陪玩报备","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
+        if (Object({"VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"陪玩报备","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
             var mpInstance = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + vm._uid +
                 ']:flushCallbacks[' + vm.__next_tick_callbacks.length + ']');
@@ -8944,14 +8944,14 @@ function nextTick$1(vm, cb) {
     //1.nextTick 之前 已 setData 且 setData 还未回调完成
     //2.nextTick 之前存在 render watcher
     if (!vm.__next_tick_pending && !hasRenderWatcher(vm)) {
-        if(Object({"NODE_ENV":"development","VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"陪玩报备","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG){
+        if(Object({"VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"陪玩报备","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG){
             var mpInstance = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + vm._uid +
                 ']:nextVueTick');
         }
         return nextTick(cb, vm)
     }else{
-        if(Object({"NODE_ENV":"development","VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"陪玩报备","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG){
+        if(Object({"VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"陪玩报备","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG){
             var mpInstance$1 = vm.$scope;
             console.log('[' + (+new Date) + '][' + (mpInstance$1.is || mpInstance$1.route) + '][' + vm._uid +
                 ']:nextMPTick');
@@ -9047,7 +9047,7 @@ var patch = function(oldVnode, vnode) {
     });
     var diffData = this.$shouldDiffData === false ? data : diff(data, mpData);
     if (Object.keys(diffData).length) {
-      if (Object({"NODE_ENV":"development","VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"陪玩报备","VUE_APP_PLATFORM":"mp-weixin","BASE_URL":"/"}).VUE_APP_DEBUG) {
+      if (Object({"VUE_APP_DARK_MODE":"false","VUE_APP_NAME":"陪玩报备","VUE_APP_PLATFORM":"mp-weixin","NODE_ENV":"development","BASE_URL":"/"}).VUE_APP_DEBUG) {
         console.log('[' + (+new Date) + '][' + (mpInstance.is || mpInstance.route) + '][' + this._uid +
           ']差量更新',
           JSON.stringify(diffData));
@@ -9466,9 +9466,9 @@ internalMixin(Vue);
 
 /***/ }),
 /* 26 */
-/*!*************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/pages.json ***!
-  \*************************************************************/
+/*!**************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/pages.json ***!
+  \**************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -9476,9 +9476,9 @@ internalMixin(Vue);
 
 /***/ }),
 /* 27 */
-/*!********************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/index.js ***!
-  \********************************************************************************/
+/*!*********************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/index.js ***!
+  \*********************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -9565,9 +9565,9 @@ exports.default = _default;
 
 /***/ }),
 /* 28 */
-/*!*******************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/libs/mixin/mixin.js ***!
-  \*******************************************************************************************/
+/*!********************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/libs/mixin/mixin.js ***!
+  \********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -9733,9 +9733,9 @@ exports.default = _default;
 
 /***/ }),
 /* 29 */
-/*!*********************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/libs/mixin/mpMixin.js ***!
-  \*********************************************************************************************/
+/*!**********************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/libs/mixin/mpMixin.js ***!
+  \**********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -9756,9 +9756,9 @@ exports.default = _default;
 
 /***/ }),
 /* 30 */
-/*!**************************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/libs/luch-request/index.js ***!
-  \**************************************************************************************************/
+/*!***************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/libs/luch-request/index.js ***!
+  \***************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -9776,9 +9776,9 @@ exports.default = _default;
 
 /***/ }),
 /* 31 */
-/*!*********************************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/libs/luch-request/core/Request.js ***!
-  \*********************************************************************************************************/
+/*!**********************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/libs/luch-request/core/Request.js ***!
+  \**********************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -9982,9 +9982,9 @@ exports.default = Request;
 
 /***/ }),
 /* 32 */
-/*!*****************************************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/libs/luch-request/core/dispatchRequest.js ***!
-  \*****************************************************************************************************************/
+/*!******************************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/libs/luch-request/core/dispatchRequest.js ***!
+  \******************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10004,9 +10004,9 @@ exports.default = _default;
 
 /***/ }),
 /* 33 */
-/*!***********************************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/libs/luch-request/adapters/index.js ***!
-  \***********************************************************************************************************/
+/*!************************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/libs/luch-request/adapters/index.js ***!
+  \************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10085,9 +10085,9 @@ exports.default = _default;
 
 /***/ }),
 /* 34 */
-/*!*************************************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/libs/luch-request/helpers/buildURL.js ***!
-  \*************************************************************************************************************/
+/*!**************************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/libs/luch-request/helpers/buildURL.js ***!
+  \**************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10155,9 +10155,9 @@ function buildURL(url, params) {
 
 /***/ }),
 /* 35 */
-/*!**************************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/libs/luch-request/utils.js ***!
-  \**************************************************************************************************/
+/*!***************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/libs/luch-request/utils.js ***!
+  \***************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10308,9 +10308,9 @@ function isUndefined(val) {
 
 /***/ }),
 /* 36 */
-/*!***************************************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/libs/luch-request/core/buildFullPath.js ***!
-  \***************************************************************************************************************/
+/*!****************************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/libs/luch-request/core/buildFullPath.js ***!
+  \****************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10342,9 +10342,9 @@ function buildFullPath(baseURL, requestedURL) {
 
 /***/ }),
 /* 37 */
-/*!******************************************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/libs/luch-request/helpers/isAbsoluteURL.js ***!
-  \******************************************************************************************************************/
+/*!*******************************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/libs/luch-request/helpers/isAbsoluteURL.js ***!
+  \*******************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10370,9 +10370,9 @@ function isAbsoluteURL(url) {
 
 /***/ }),
 /* 38 */
-/*!****************************************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/libs/luch-request/helpers/combineURLs.js ***!
-  \****************************************************************************************************************/
+/*!*****************************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/libs/luch-request/helpers/combineURLs.js ***!
+  \*****************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10396,9 +10396,9 @@ function combineURLs(baseURL, relativeURL) {
 
 /***/ }),
 /* 39 */
-/*!********************************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/libs/luch-request/core/settle.js ***!
-  \********************************************************************************************************/
+/*!*********************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/libs/luch-request/core/settle.js ***!
+  \*********************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10428,9 +10428,9 @@ function settle(resolve, reject, response) {
 
 /***/ }),
 /* 40 */
-/*!********************************************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/libs/luch-request/core/InterceptorManager.js ***!
-  \********************************************************************************************************************/
+/*!*********************************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/libs/luch-request/core/InterceptorManager.js ***!
+  \*********************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10492,9 +10492,9 @@ exports.default = _default;
 
 /***/ }),
 /* 41 */
-/*!*************************************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/libs/luch-request/core/mergeConfig.js ***!
-  \*************************************************************************************************************/
+/*!**************************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/libs/luch-request/core/mergeConfig.js ***!
+  \**************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10568,9 +10568,9 @@ exports.default = _default;
 
 /***/ }),
 /* 42 */
-/*!**********************************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/libs/luch-request/core/defaults.js ***!
-  \**********************************************************************************************************/
+/*!***********************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/libs/luch-request/core/defaults.js ***!
+  \***********************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10600,9 +10600,9 @@ exports.default = _default;
 
 /***/ }),
 /* 43 */
-/*!********************************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/libs/luch-request/utils/clone.js ***!
-  \********************************************************************************************************/
+/*!*********************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/libs/luch-request/utils/clone.js ***!
+  \*********************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -10848,7 +10848,7 @@ var clone = function () {
 }();
 var _default = clone;
 exports.default = _default;
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../../../../../../../HBuilderX/plugins/uniapp-cli/node_modules/buffer/index.js */ 44).Buffer))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/buffer/index.js */ 44).Buffer))
 
 /***/ }),
 /* 44 */
@@ -12924,9 +12924,9 @@ module.exports = Array.isArray || function (arr) {
 
 /***/ }),
 /* 48 */
-/*!******************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/libs/util/route.js ***!
-  \******************************************************************************************/
+/*!*******************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/libs/util/route.js ***!
+  \*******************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -13486,9 +13486,9 @@ module.exports = _asyncToGenerator, module.exports.__esModule = true, module.exp
 
 /***/ }),
 /* 52 */
-/*!******************************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/libs/function/colorGradient.js ***!
-  \******************************************************************************************************/
+/*!*******************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/libs/function/colorGradient.js ***!
+  \*******************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -13641,9 +13641,9 @@ exports.default = _default;
 
 /***/ }),
 /* 53 */
-/*!*********************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/libs/function/test.js ***!
-  \*********************************************************************************************/
+/*!**********************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/libs/function/test.js ***!
+  \**********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -13946,9 +13946,9 @@ exports.default = _default;
 
 /***/ }),
 /* 54 */
-/*!*************************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/libs/function/debounce.js ***!
-  \*************************************************************************************************/
+/*!**************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/libs/function/debounce.js ***!
+  \**************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -13993,9 +13993,9 @@ exports.default = _default;
 
 /***/ }),
 /* 55 */
-/*!*************************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/libs/function/throttle.js ***!
-  \*************************************************************************************************/
+/*!**************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/libs/function/throttle.js ***!
+  \**************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -14042,9 +14042,9 @@ exports.default = _default;
 
 /***/ }),
 /* 56 */
-/*!**********************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/libs/function/index.js ***!
-  \**********************************************************************************************/
+/*!***********************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/libs/function/index.js ***!
+  \***********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -14843,9 +14843,9 @@ exports.default = _default;
 
 /***/ }),
 /* 57 */
-/*!**********************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/libs/function/digit.js ***!
-  \**********************************************************************************************/
+/*!***********************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/libs/function/digit.js ***!
+  \***********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -15062,9 +15062,9 @@ module.exports = _toArray, module.exports.__esModule = true, module.exports["def
 
 /***/ }),
 /* 59 */
-/*!*********************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/libs/config/config.js ***!
-  \*********************************************************************************************/
+/*!**********************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/libs/config/config.js ***!
+  \**********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -15106,9 +15106,9 @@ exports.default = _default;
 
 /***/ }),
 /* 60 */
-/*!********************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/libs/config/props.js ***!
-  \********************************************************************************************/
+/*!*********************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/libs/config/props.js ***!
+  \*********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -15218,9 +15218,9 @@ exports.default = _default;
 
 /***/ }),
 /* 61 */
-/*!********************************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/libs/config/props/actionSheet.js ***!
-  \********************************************************************************************************/
+/*!*********************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/libs/config/props/actionSheet.js ***!
+  \*********************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -15262,9 +15262,9 @@ exports.default = _default;
 
 /***/ }),
 /* 62 */
-/*!**************************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/libs/config/props/album.js ***!
-  \**************************************************************************************************/
+/*!***************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/libs/config/props/album.js ***!
+  \***************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -15306,9 +15306,9 @@ exports.default = _default;
 
 /***/ }),
 /* 63 */
-/*!**************************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/libs/config/props/alert.js ***!
-  \**************************************************************************************************/
+/*!***************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/libs/config/props/alert.js ***!
+  \***************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -15345,9 +15345,9 @@ exports.default = _default;
 
 /***/ }),
 /* 64 */
-/*!***************************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/libs/config/props/avatar.js ***!
-  \***************************************************************************************************/
+/*!****************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/libs/config/props/avatar.js ***!
+  \****************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -15390,9 +15390,9 @@ exports.default = _default;
 
 /***/ }),
 /* 65 */
-/*!********************************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/libs/config/props/avatarGroup.js ***!
-  \********************************************************************************************************/
+/*!*********************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/libs/config/props/avatarGroup.js ***!
+  \*********************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -15432,9 +15432,9 @@ exports.default = _default;
 
 /***/ }),
 /* 66 */
-/*!****************************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/libs/config/props/backtop.js ***!
-  \****************************************************************************************************/
+/*!*****************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/libs/config/props/backtop.js ***!
+  \*****************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -15478,9 +15478,9 @@ exports.default = _default;
 
 /***/ }),
 /* 67 */
-/*!**************************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/libs/config/props/badge.js ***!
-  \**************************************************************************************************/
+/*!***************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/libs/config/props/badge.js ***!
+  \***************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -15524,9 +15524,9 @@ exports.default = _default;
 
 /***/ }),
 /* 68 */
-/*!***************************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/libs/config/props/button.js ***!
-  \***************************************************************************************************/
+/*!****************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/libs/config/props/button.js ***!
+  \****************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -15583,9 +15583,9 @@ exports.default = _default;
 
 /***/ }),
 /* 69 */
-/*!*****************************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/libs/config/props/calendar.js ***!
-  \*****************************************************************************************************/
+/*!******************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/libs/config/props/calendar.js ***!
+  \******************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -15646,9 +15646,9 @@ exports.default = _default;
 
 /***/ }),
 /* 70 */
-/*!********************************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/libs/config/props/carKeyboard.js ***!
-  \********************************************************************************************************/
+/*!*********************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/libs/config/props/carKeyboard.js ***!
+  \*********************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -15678,9 +15678,9 @@ exports.default = _default;
 
 /***/ }),
 /* 71 */
-/*!*************************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/libs/config/props/cell.js ***!
-  \*************************************************************************************************/
+/*!**************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/libs/config/props/cell.js ***!
+  \**************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -15730,9 +15730,9 @@ exports.default = _default;
 
 /***/ }),
 /* 72 */
-/*!******************************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/libs/config/props/cellGroup.js ***!
-  \******************************************************************************************************/
+/*!*******************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/libs/config/props/cellGroup.js ***!
+  \*******************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -15764,9 +15764,9 @@ exports.default = _default;
 
 /***/ }),
 /* 73 */
-/*!*****************************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/libs/config/props/checkbox.js ***!
-  \*****************************************************************************************************/
+/*!******************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/libs/config/props/checkbox.js ***!
+  \******************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -15808,9 +15808,9 @@ exports.default = _default;
 
 /***/ }),
 /* 74 */
-/*!**********************************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/libs/config/props/checkboxGroup.js ***!
-  \**********************************************************************************************************/
+/*!***********************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/libs/config/props/checkboxGroup.js ***!
+  \***********************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -15856,9 +15856,9 @@ exports.default = _default;
 
 /***/ }),
 /* 75 */
-/*!***********************************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/libs/config/props/circleProgress.js ***!
-  \***********************************************************************************************************/
+/*!************************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/libs/config/props/circleProgress.js ***!
+  \************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -15888,9 +15888,9 @@ exports.default = _default;
 
 /***/ }),
 /* 76 */
-/*!*************************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/libs/config/props/code.js ***!
-  \*************************************************************************************************/
+/*!**************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/libs/config/props/code.js ***!
+  \**************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -15925,9 +15925,9 @@ exports.default = _default;
 
 /***/ }),
 /* 77 */
-/*!******************************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/libs/config/props/codeInput.js ***!
-  \******************************************************************************************************/
+/*!*******************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/libs/config/props/codeInput.js ***!
+  \*******************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -15971,9 +15971,9 @@ exports.default = _default;
 
 /***/ }),
 /* 78 */
-/*!************************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/libs/config/props/col.js ***!
-  \************************************************************************************************/
+/*!*************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/libs/config/props/col.js ***!
+  \*************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -16007,9 +16007,9 @@ exports.default = _default;
 
 /***/ }),
 /* 79 */
-/*!*****************************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/libs/config/props/collapse.js ***!
-  \*****************************************************************************************************/
+/*!******************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/libs/config/props/collapse.js ***!
+  \******************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -16041,9 +16041,9 @@ exports.default = _default;
 
 /***/ }),
 /* 80 */
-/*!*********************************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/libs/config/props/collapseItem.js ***!
-  \*********************************************************************************************************/
+/*!**********************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/libs/config/props/collapseItem.js ***!
+  \**********************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -16083,9 +16083,9 @@ exports.default = _default;
 
 /***/ }),
 /* 81 */
-/*!*********************************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/libs/config/props/columnNotice.js ***!
-  \*********************************************************************************************************/
+/*!**********************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/libs/config/props/columnNotice.js ***!
+  \**********************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -16124,9 +16124,9 @@ exports.default = _default;
 
 /***/ }),
 /* 82 */
-/*!******************************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/libs/config/props/countDown.js ***!
-  \******************************************************************************************************/
+/*!*******************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/libs/config/props/countDown.js ***!
+  \*******************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -16159,9 +16159,9 @@ exports.default = _default;
 
 /***/ }),
 /* 83 */
-/*!****************************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/libs/config/props/countTo.js ***!
-  \****************************************************************************************************/
+/*!*****************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/libs/config/props/countTo.js ***!
+  \*****************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -16201,9 +16201,9 @@ exports.default = _default;
 
 /***/ }),
 /* 84 */
-/*!***********************************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/libs/config/props/datetimePicker.js ***!
-  \***********************************************************************************************************/
+/*!************************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/libs/config/props/datetimePicker.js ***!
+  \************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -16256,9 +16256,9 @@ exports.default = _default;
 
 /***/ }),
 /* 85 */
-/*!****************************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/libs/config/props/divider.js ***!
-  \****************************************************************************************************/
+/*!*****************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/libs/config/props/divider.js ***!
+  \*****************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -16295,9 +16295,9 @@ exports.default = _default;
 
 /***/ }),
 /* 86 */
-/*!**************************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/libs/config/props/empty.js ***!
-  \**************************************************************************************************/
+/*!***************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/libs/config/props/empty.js ***!
+  \***************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -16337,9 +16337,9 @@ exports.default = _default;
 
 /***/ }),
 /* 87 */
-/*!*************************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/libs/config/props/form.js ***!
-  \*************************************************************************************************/
+/*!**************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/libs/config/props/form.js ***!
+  \**************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -16382,9 +16382,9 @@ exports.default = _default;
 
 /***/ }),
 /* 88 */
-/*!*****************************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/libs/config/props/formItem.js ***!
-  \*****************************************************************************************************/
+/*!******************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/libs/config/props/formItem.js ***!
+  \******************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -16422,9 +16422,9 @@ exports.default = _default;
 
 /***/ }),
 /* 89 */
-/*!************************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/libs/config/props/gap.js ***!
-  \************************************************************************************************/
+/*!*************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/libs/config/props/gap.js ***!
+  \*************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -16458,9 +16458,9 @@ exports.default = _default;
 
 /***/ }),
 /* 90 */
-/*!*************************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/libs/config/props/grid.js ***!
-  \*************************************************************************************************/
+/*!**************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/libs/config/props/grid.js ***!
+  \**************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -16492,9 +16492,9 @@ exports.default = _default;
 
 /***/ }),
 /* 91 */
-/*!*****************************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/libs/config/props/gridItem.js ***!
-  \*****************************************************************************************************/
+/*!******************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/libs/config/props/gridItem.js ***!
+  \******************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -16525,9 +16525,9 @@ exports.default = _default;
 
 /***/ }),
 /* 92 */
-/*!*************************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/libs/config/props/icon.js ***!
-  \*************************************************************************************************/
+/*!**************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/libs/config/props/icon.js ***!
+  \**************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -16577,9 +16577,9 @@ exports.default = _default;
 
 /***/ }),
 /* 93 */
-/*!**************************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/libs/config/props/image.js ***!
-  \**************************************************************************************************/
+/*!***************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/libs/config/props/image.js ***!
+  \***************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -16624,9 +16624,9 @@ exports.default = _default;
 
 /***/ }),
 /* 94 */
-/*!********************************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/libs/config/props/indexAnchor.js ***!
-  \********************************************************************************************************/
+/*!*********************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/libs/config/props/indexAnchor.js ***!
+  \*********************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -16660,9 +16660,9 @@ exports.default = _default;
 
 /***/ }),
 /* 95 */
-/*!******************************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/libs/config/props/indexList.js ***!
-  \******************************************************************************************************/
+/*!*******************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/libs/config/props/indexList.js ***!
+  \*******************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -16698,9 +16698,9 @@ exports.default = _default;
 
 /***/ }),
 /* 96 */
-/*!**************************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/libs/config/props/input.js ***!
-  \**************************************************************************************************/
+/*!***************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/libs/config/props/input.js ***!
+  \***************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -16763,9 +16763,9 @@ exports.default = _default;
 
 /***/ }),
 /* 97 */
-/*!*****************************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/libs/config/props/keyboard.js ***!
-  \*****************************************************************************************************/
+/*!******************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/libs/config/props/keyboard.js ***!
+  \******************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -16810,9 +16810,9 @@ exports.default = _default;
 
 /***/ }),
 /* 98 */
-/*!*************************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/libs/config/props/line.js ***!
-  \*************************************************************************************************/
+/*!**************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/libs/config/props/line.js ***!
+  \**************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -16847,9 +16847,9 @@ exports.default = _default;
 
 /***/ }),
 /* 99 */
-/*!*********************************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/libs/config/props/lineProgress.js ***!
-  \*********************************************************************************************************/
+/*!**********************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/libs/config/props/lineProgress.js ***!
+  \**********************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -16883,9 +16883,9 @@ exports.default = _default;
 
 /***/ }),
 /* 100 */
-/*!*************************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/libs/config/props/link.js ***!
-  \*************************************************************************************************/
+/*!**************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/libs/config/props/link.js ***!
+  \**************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -16925,9 +16925,9 @@ exports.default = _default;
 
 /***/ }),
 /* 101 */
-/*!*************************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/libs/config/props/list.js ***!
-  \*************************************************************************************************/
+/*!**************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/libs/config/props/list.js ***!
+  \**************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -16970,9 +16970,9 @@ exports.default = _default;
 
 /***/ }),
 /* 102 */
-/*!*****************************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/libs/config/props/listItem.js ***!
-  \*****************************************************************************************************/
+/*!******************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/libs/config/props/listItem.js ***!
+  \******************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -17002,9 +17002,9 @@ exports.default = _default;
 
 /***/ }),
 /* 103 */
-/*!********************************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/libs/config/props/loadingIcon.js ***!
-  \********************************************************************************************************/
+/*!*********************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/libs/config/props/loadingIcon.js ***!
+  \*********************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -17048,9 +17048,9 @@ exports.default = _default;
 
 /***/ }),
 /* 104 */
-/*!********************************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/libs/config/props/loadingPage.js ***!
-  \********************************************************************************************************/
+/*!*********************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/libs/config/props/loadingPage.js ***!
+  \*********************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -17088,9 +17088,9 @@ exports.default = _default;
 
 /***/ }),
 /* 105 */
-/*!*****************************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/libs/config/props/loadmore.js ***!
-  \*****************************************************************************************************/
+/*!******************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/libs/config/props/loadmore.js ***!
+  \******************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -17137,9 +17137,9 @@ exports.default = _default;
 
 /***/ }),
 /* 106 */
-/*!**************************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/libs/config/props/modal.js ***!
-  \**************************************************************************************************/
+/*!***************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/libs/config/props/modal.js ***!
+  \***************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -17185,9 +17185,9 @@ exports.default = _default;
 
 /***/ }),
 /* 107 */
-/*!***************************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/libs/config/props/navbar.js ***!
-  \***************************************************************************************************/
+/*!****************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/libs/config/props/navbar.js ***!
+  \****************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -17234,9 +17234,9 @@ exports.default = _default;
 
 /***/ }),
 /* 108 */
-/*!********************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/libs/config/color.js ***!
-  \********************************************************************************************/
+/*!*********************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/libs/config/color.js ***!
+  \*********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -17267,9 +17267,9 @@ exports.default = _default;
 
 /***/ }),
 /* 109 */
-/*!******************************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/libs/config/props/noNetwork.js ***!
-  \******************************************************************************************************/
+/*!*******************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/libs/config/props/noNetwork.js ***!
+  \*******************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -17301,9 +17301,9 @@ exports.default = _default;
 
 /***/ }),
 /* 110 */
-/*!******************************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/libs/config/props/noticeBar.js ***!
-  \******************************************************************************************************/
+/*!*******************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/libs/config/props/noticeBar.js ***!
+  \*******************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -17347,9 +17347,9 @@ exports.default = _default;
 
 /***/ }),
 /* 111 */
-/*!***************************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/libs/config/props/notify.js ***!
-  \***************************************************************************************************/
+/*!****************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/libs/config/props/notify.js ***!
+  \****************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -17386,9 +17386,9 @@ exports.default = _default;
 
 /***/ }),
 /* 112 */
-/*!******************************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/libs/config/props/numberBox.js ***!
-  \******************************************************************************************************/
+/*!*******************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/libs/config/props/numberBox.js ***!
+  \*******************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -17438,9 +17438,9 @@ exports.default = _default;
 
 /***/ }),
 /* 113 */
-/*!***********************************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/libs/config/props/numberKeyboard.js ***!
-  \***********************************************************************************************************/
+/*!************************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/libs/config/props/numberKeyboard.js ***!
+  \************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -17472,9 +17472,9 @@ exports.default = _default;
 
 /***/ }),
 /* 114 */
-/*!****************************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/libs/config/props/overlay.js ***!
-  \****************************************************************************************************/
+/*!*****************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/libs/config/props/overlay.js ***!
+  \*****************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -17507,9 +17507,9 @@ exports.default = _default;
 
 /***/ }),
 /* 115 */
-/*!**************************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/libs/config/props/parse.js ***!
-  \**************************************************************************************************/
+/*!***************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/libs/config/props/parse.js ***!
+  \***************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -17546,9 +17546,9 @@ exports.default = _default;
 
 /***/ }),
 /* 116 */
-/*!***************************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/libs/config/props/picker.js ***!
-  \***************************************************************************************************/
+/*!****************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/libs/config/props/picker.js ***!
+  \****************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -17596,9 +17596,9 @@ exports.default = _default;
 
 /***/ }),
 /* 117 */
-/*!**************************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/libs/config/props/popup.js ***!
-  \**************************************************************************************************/
+/*!***************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/libs/config/props/popup.js ***!
+  \***************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -17642,9 +17642,9 @@ exports.default = _default;
 
 /***/ }),
 /* 118 */
-/*!**************************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/libs/config/props/radio.js ***!
-  \**************************************************************************************************/
+/*!***************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/libs/config/props/radio.js ***!
+  \***************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -17686,9 +17686,9 @@ exports.default = _default;
 
 /***/ }),
 /* 119 */
-/*!*******************************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/libs/config/props/radioGroup.js ***!
-  \*******************************************************************************************************/
+/*!********************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/libs/config/props/radioGroup.js ***!
+  \********************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -17733,9 +17733,9 @@ exports.default = _default;
 
 /***/ }),
 /* 120 */
-/*!*************************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/libs/config/props/rate.js ***!
-  \*************************************************************************************************/
+/*!**************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/libs/config/props/rate.js ***!
+  \**************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -17776,9 +17776,9 @@ exports.default = _default;
 
 /***/ }),
 /* 121 */
-/*!*****************************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/libs/config/props/readMore.js ***!
-  \*****************************************************************************************************/
+/*!******************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/libs/config/props/readMore.js ***!
+  \******************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -17815,9 +17815,9 @@ exports.default = _default;
 
 /***/ }),
 /* 122 */
-/*!************************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/libs/config/props/row.js ***!
-  \************************************************************************************************/
+/*!*************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/libs/config/props/row.js ***!
+  \*************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -17849,9 +17849,9 @@ exports.default = _default;
 
 /***/ }),
 /* 123 */
-/*!******************************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/libs/config/props/rowNotice.js ***!
-  \******************************************************************************************************/
+/*!*******************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/libs/config/props/rowNotice.js ***!
+  \*******************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -17887,9 +17887,9 @@ exports.default = _default;
 
 /***/ }),
 /* 124 */
-/*!*******************************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/libs/config/props/scrollList.js ***!
-  \*******************************************************************************************************/
+/*!********************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/libs/config/props/scrollList.js ***!
+  \********************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -17924,9 +17924,9 @@ exports.default = _default;
 
 /***/ }),
 /* 125 */
-/*!***************************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/libs/config/props/search.js ***!
-  \***************************************************************************************************/
+/*!****************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/libs/config/props/search.js ***!
+  \****************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -17982,9 +17982,9 @@ exports.default = _default;
 
 /***/ }),
 /* 126 */
-/*!****************************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/libs/config/props/section.js ***!
-  \****************************************************************************************************/
+/*!*****************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/libs/config/props/section.js ***!
+  \*****************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -18023,9 +18023,9 @@ exports.default = _default;
 
 /***/ }),
 /* 127 */
-/*!*****************************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/libs/config/props/skeleton.js ***!
-  \*****************************************************************************************************/
+/*!******************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/libs/config/props/skeleton.js ***!
+  \******************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -18065,9 +18065,9 @@ exports.default = _default;
 
 /***/ }),
 /* 128 */
-/*!***************************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/libs/config/props/slider.js ***!
-  \***************************************************************************************************/
+/*!****************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/libs/config/props/slider.js ***!
+  \****************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -18107,9 +18107,9 @@ exports.default = _default;
 
 /***/ }),
 /* 129 */
-/*!******************************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/libs/config/props/statusBar.js ***!
-  \******************************************************************************************************/
+/*!*******************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/libs/config/props/statusBar.js ***!
+  \*******************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -18139,9 +18139,9 @@ exports.default = _default;
 
 /***/ }),
 /* 130 */
-/*!**************************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/libs/config/props/steps.js ***!
-  \**************************************************************************************************/
+/*!***************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/libs/config/props/steps.js ***!
+  \***************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -18177,9 +18177,9 @@ exports.default = _default;
 
 /***/ }),
 /* 131 */
-/*!******************************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/libs/config/props/stepsItem.js ***!
-  \******************************************************************************************************/
+/*!*******************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/libs/config/props/stepsItem.js ***!
+  \*******************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -18212,9 +18212,9 @@ exports.default = _default;
 
 /***/ }),
 /* 132 */
-/*!***************************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/libs/config/props/sticky.js ***!
-  \***************************************************************************************************/
+/*!****************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/libs/config/props/sticky.js ***!
+  \****************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -18249,9 +18249,9 @@ exports.default = _default;
 
 /***/ }),
 /* 133 */
-/*!*******************************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/libs/config/props/subsection.js ***!
-  \*******************************************************************************************************/
+/*!********************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/libs/config/props/subsection.js ***!
+  \********************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -18289,9 +18289,9 @@ exports.default = _default;
 
 /***/ }),
 /* 134 */
-/*!********************************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/libs/config/props/swipeAction.js ***!
-  \********************************************************************************************************/
+/*!*********************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/libs/config/props/swipeAction.js ***!
+  \*********************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -18321,9 +18321,9 @@ exports.default = _default;
 
 /***/ }),
 /* 135 */
-/*!************************************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/libs/config/props/swipeActionItem.js ***!
-  \************************************************************************************************************/
+/*!*************************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/libs/config/props/swipeActionItem.js ***!
+  \*************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -18359,9 +18359,9 @@ exports.default = _default;
 
 /***/ }),
 /* 136 */
-/*!***************************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/libs/config/props/swiper.js ***!
-  \***************************************************************************************************/
+/*!****************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/libs/config/props/swiper.js ***!
+  \****************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -18416,9 +18416,9 @@ exports.default = _default;
 
 /***/ }),
 /* 137 */
-/*!*************************************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/libs/config/props/swipterIndicator.js ***!
-  \*************************************************************************************************************/
+/*!**************************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/libs/config/props/swipterIndicator.js ***!
+  \**************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -18452,9 +18452,9 @@ exports.default = _default;
 
 /***/ }),
 /* 138 */
-/*!***************************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/libs/config/props/switch.js ***!
-  \***************************************************************************************************/
+/*!****************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/libs/config/props/switch.js ***!
+  \****************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -18493,9 +18493,9 @@ exports.default = _default;
 
 /***/ }),
 /* 139 */
-/*!***************************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/libs/config/props/tabbar.js ***!
-  \***************************************************************************************************/
+/*!****************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/libs/config/props/tabbar.js ***!
+  \****************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -18532,9 +18532,9 @@ exports.default = _default;
 
 /***/ }),
 /* 140 */
-/*!*******************************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/libs/config/props/tabbarItem.js ***!
-  \*******************************************************************************************************/
+/*!********************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/libs/config/props/tabbarItem.js ***!
+  \********************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -18569,9 +18569,9 @@ exports.default = _default;
 
 /***/ }),
 /* 141 */
-/*!*************************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/libs/config/props/tabs.js ***!
-  \*************************************************************************************************/
+/*!**************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/libs/config/props/tabs.js ***!
+  \**************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -18626,9 +18626,9 @@ exports.default = _default;
 
 /***/ }),
 /* 142 */
-/*!************************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/libs/config/props/tag.js ***!
-  \************************************************************************************************/
+/*!*************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/libs/config/props/tag.js ***!
+  \*************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -18672,9 +18672,9 @@ exports.default = _default;
 
 /***/ }),
 /* 143 */
-/*!*************************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/libs/config/props/text.js ***!
-  \*************************************************************************************************/
+/*!**************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/libs/config/props/text.js ***!
+  \**************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -18728,9 +18728,9 @@ exports.default = _default;
 
 /***/ }),
 /* 144 */
-/*!*****************************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/libs/config/props/textarea.js ***!
-  \*****************************************************************************************************/
+/*!******************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/libs/config/props/textarea.js ***!
+  \******************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -18781,9 +18781,9 @@ exports.default = _default;
 
 /***/ }),
 /* 145 */
-/*!**************************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/libs/config/props/toast.js ***!
-  \**************************************************************************************************/
+/*!***************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/libs/config/props/toast.js ***!
+  \***************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -18827,9 +18827,9 @@ exports.default = _default;
 
 /***/ }),
 /* 146 */
-/*!****************************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/libs/config/props/toolbar.js ***!
-  \****************************************************************************************************/
+/*!*****************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/libs/config/props/toolbar.js ***!
+  \*****************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -18864,9 +18864,9 @@ exports.default = _default;
 
 /***/ }),
 /* 147 */
-/*!****************************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/libs/config/props/tooltip.js ***!
-  \****************************************************************************************************/
+/*!*****************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/libs/config/props/tooltip.js ***!
+  \*****************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -18908,9 +18908,9 @@ exports.default = _default;
 
 /***/ }),
 /* 148 */
-/*!*******************************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/libs/config/props/transition.js ***!
-  \*******************************************************************************************************/
+/*!********************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/libs/config/props/transition.js ***!
+  \********************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -18943,9 +18943,9 @@ exports.default = _default;
 
 /***/ }),
 /* 149 */
-/*!***************************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/libs/config/props/upload.js ***!
-  \***************************************************************************************************/
+/*!****************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/libs/config/props/upload.js ***!
+  \****************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -19002,9 +19002,9 @@ exports.default = _default;
 
 /***/ }),
 /* 150 */
-/*!*********************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/libs/config/zIndex.js ***!
-  \*********************************************************************************************/
+/*!**********************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/libs/config/zIndex.js ***!
+  \**********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -19038,9 +19038,9 @@ exports.default = _default;
 
 /***/ }),
 /* 151 */
-/*!*************************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/libs/function/platform.js ***!
-  \*************************************************************************************************/
+/*!**************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/libs/function/platform.js ***!
+  \**************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -19210,9 +19210,9 @@ function normalizeComponent (
 /* 162 */,
 /* 163 */,
 /* 164 */
-/*!***************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/utils/api.js ***!
-  \***************************************************************/
+/*!****************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/utils/api.js ***!
+  \****************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -19250,9 +19250,9 @@ function rq(options) {
 
 /***/ }),
 /* 165 */
-/*!******************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/utils/config.js ***!
-  \******************************************************************/
+/*!*******************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/utils/config.js ***!
+  \*******************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -19262,13 +19262,9 @@ function rq(options) {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.service_url = exports.img_robot = exports.img_more = void 0;
+exports.service_url = void 0;
 var service_url = "http://localhost:3000";
 exports.service_url = service_url;
-var img_more = "https://static-package.peiwan.tv/img/gamelogo/new/more.png?imageView2/1/interlace/1/ignore-error/1/w/91/format/jpg";
-exports.img_more = img_more;
-var img_robot = "https://static-package.peiwan.tv/theme/default/img/common/robot.png";
-exports.img_robot = img_robot;
 
 /***/ }),
 /* 166 */,
@@ -19310,10 +19306,32 @@ exports.img_robot = img_robot;
 /* 202 */,
 /* 203 */,
 /* 204 */,
-/* 205 */
-/*!*********************************************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uni-search-bar/components/uni-search-bar/i18n/index.js ***!
-  \*********************************************************************************************************************/
+/* 205 */,
+/* 206 */,
+/* 207 */,
+/* 208 */,
+/* 209 */,
+/* 210 */,
+/* 211 */,
+/* 212 */,
+/* 213 */,
+/* 214 */,
+/* 215 */,
+/* 216 */,
+/* 217 */,
+/* 218 */,
+/* 219 */,
+/* 220 */,
+/* 221 */,
+/* 222 */,
+/* 223 */,
+/* 224 */,
+/* 225 */,
+/* 226 */,
+/* 227 */
+/*!**********************************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uni-search-bar/components/uni-search-bar/i18n/index.js ***!
+  \**********************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -19325,9 +19343,9 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
-var _en = _interopRequireDefault(__webpack_require__(/*! ./en.json */ 206));
-var _zhHans = _interopRequireDefault(__webpack_require__(/*! ./zh-Hans.json */ 207));
-var _zhHant = _interopRequireDefault(__webpack_require__(/*! ./zh-Hant.json */ 208));
+var _en = _interopRequireDefault(__webpack_require__(/*! ./en.json */ 228));
+var _zhHans = _interopRequireDefault(__webpack_require__(/*! ./zh-Hans.json */ 229));
+var _zhHant = _interopRequireDefault(__webpack_require__(/*! ./zh-Hant.json */ 230));
 var _default = {
   en: _en.default,
   'zh-Hans': _zhHans.default,
@@ -19336,47 +19354,47 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 206 */
-/*!********************************************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uni-search-bar/components/uni-search-bar/i18n/en.json ***!
-  \********************************************************************************************************************/
+/* 228 */
+/*!*********************************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uni-search-bar/components/uni-search-bar/i18n/en.json ***!
+  \*********************************************************************************************************************************/
 /*! exports provided: uni-search-bar.cancel, uni-search-bar.placeholder, default */
 /***/ (function(module) {
 
 module.exports = JSON.parse("{\"uni-search-bar.cancel\":\"cancel\",\"uni-search-bar.placeholder\":\"Search enter content\"}");
 
 /***/ }),
-/* 207 */
-/*!*************************************************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uni-search-bar/components/uni-search-bar/i18n/zh-Hans.json ***!
-  \*************************************************************************************************************************/
+/* 229 */
+/*!**************************************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uni-search-bar/components/uni-search-bar/i18n/zh-Hans.json ***!
+  \**************************************************************************************************************************************/
 /*! exports provided: uni-search-bar.cancel, uni-search-bar.placeholder, default */
 /***/ (function(module) {
 
 module.exports = JSON.parse("{\"uni-search-bar.cancel\":\"取消\",\"uni-search-bar.placeholder\":\"请输入搜索内容\"}");
 
 /***/ }),
-/* 208 */
-/*!*************************************************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uni-search-bar/components/uni-search-bar/i18n/zh-Hant.json ***!
-  \*************************************************************************************************************************/
+/* 230 */
+/*!**************************************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uni-search-bar/components/uni-search-bar/i18n/zh-Hant.json ***!
+  \**************************************************************************************************************************************/
 /*! exports provided: uni-search-bar.cancel, uni-search-bar.placeholder, default */
 /***/ (function(module) {
 
 module.exports = JSON.parse("{\"uni-search-bar.cancel\":\"取消\",\"uni-search-bar.placeholder\":\"請輸入搜索內容\"}");
 
 /***/ }),
-/* 209 */,
-/* 210 */,
-/* 211 */,
-/* 212 */,
-/* 213 */,
-/* 214 */,
-/* 215 */,
-/* 216 */
-/*!******************************************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uni-icons/components/uni-icons/uniicons_file_vue.js ***!
-  \******************************************************************************************************************/
+/* 231 */,
+/* 232 */,
+/* 233 */,
+/* 234 */,
+/* 235 */,
+/* 236 */,
+/* 237 */,
+/* 238 */
+/*!*******************************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uni-icons/components/uni-icons/uniicons_file_vue.js ***!
+  \*******************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -19876,38 +19894,38 @@ var fontData = [{
 exports.fontData = fontData;
 
 /***/ }),
-/* 217 */,
-/* 218 */,
-/* 219 */,
-/* 220 */,
-/* 221 */,
-/* 222 */,
-/* 223 */,
-/* 224 */,
-/* 225 */,
-/* 226 */,
-/* 227 */,
-/* 228 */,
-/* 229 */,
-/* 230 */,
-/* 231 */,
-/* 232 */,
-/* 233 */,
-/* 234 */,
-/* 235 */,
-/* 236 */,
-/* 237 */,
-/* 238 */,
 /* 239 */,
 /* 240 */,
 /* 241 */,
 /* 242 */,
 /* 243 */,
 /* 244 */,
-/* 245 */
-/*!**************************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/components/u-tabs/props.js ***!
-  \**************************************************************************************************/
+/* 245 */,
+/* 246 */,
+/* 247 */,
+/* 248 */,
+/* 249 */,
+/* 250 */,
+/* 251 */,
+/* 252 */,
+/* 253 */,
+/* 254 */,
+/* 255 */,
+/* 256 */,
+/* 257 */,
+/* 258 */,
+/* 259 */,
+/* 260 */,
+/* 261 */,
+/* 262 */,
+/* 263 */,
+/* 264 */,
+/* 265 */,
+/* 266 */,
+/* 267 */
+/*!***************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/components/u-tabs/props.js ***!
+  \***************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -19986,123 +20004,6 @@ exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 246 */,
-/* 247 */,
-/* 248 */,
-/* 249 */,
-/* 250 */,
-/* 251 */,
-/* 252 */,
-/* 253 */,
-/* 254 */,
-/* 255 */,
-/* 256 */,
-/* 257 */,
-/* 258 */,
-/* 259 */,
-/* 260 */,
-/* 261 */,
-/* 262 */,
-/* 263 */,
-/* 264 */,
-/* 265 */,
-/* 266 */,
-/* 267 */
-/*!****************************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/components/u-avatar/props.js ***!
-  \****************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-var _default = {
-  props: {
-    // 头像图片路径(不能为相对路径)
-    src: {
-      type: String,
-      default: uni.$u.props.avatar.src
-    },
-    // 头像形状，circle-圆形，square-方形
-    shape: {
-      type: String,
-      default: uni.$u.props.avatar.shape
-    },
-    // 头像尺寸
-    size: {
-      type: [String, Number],
-      default: uni.$u.props.avatar.size
-    },
-    // 裁剪模式
-    mode: {
-      type: String,
-      default: uni.$u.props.avatar.mode
-    },
-    // 显示的文字
-    text: {
-      type: String,
-      default: uni.$u.props.avatar.text
-    },
-    // 背景色
-    bgColor: {
-      type: String,
-      default: uni.$u.props.avatar.bgColor
-    },
-    // 文字颜色
-    color: {
-      type: String,
-      default: uni.$u.props.avatar.color
-    },
-    // 文字大小
-    fontSize: {
-      type: [String, Number],
-      default: uni.$u.props.avatar.fontSize
-    },
-    // 显示的图标
-    icon: {
-      type: String,
-      default: uni.$u.props.avatar.icon
-    },
-    // 显示小程序头像，只对百度，微信，QQ小程序有效
-    mpAvatar: {
-      type: Boolean,
-      default: uni.$u.props.avatar.mpAvatar
-    },
-    // 是否使用随机背景色
-    randomBgColor: {
-      type: Boolean,
-      default: uni.$u.props.avatar.randomBgColor
-    },
-    // 加载失败的默认头像(组件有内置默认图片)
-    defaultUrl: {
-      type: String,
-      default: uni.$u.props.avatar.defaultUrl
-    },
-    // 如果配置了randomBgColor为true，且配置了此值，则从默认的背景色数组中取出对应索引的颜色值，取值0-19之间
-    colorIndex: {
-      type: [String, Number],
-      // 校验参数规则，索引在0-19之间
-      validator: function validator(n) {
-        return uni.$u.test.range(n, [0, 19]) || n === '';
-      },
-      default: uni.$u.props.avatar.colorIndex
-    },
-    // 组件标识符
-    name: {
-      type: String,
-      default: uni.$u.props.avatar.name
-    }
-  }
-};
-exports.default = _default;
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
-
-/***/ }),
 /* 268 */,
 /* 269 */,
 /* 270 */,
@@ -20110,63 +20011,17 @@ exports.default = _default;
 /* 272 */,
 /* 273 */,
 /* 274 */,
-/* 275 */
-/*!***********************************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/components/u-line-progress/props.js ***!
-  \***********************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-var _default = {
-  props: {
-    // 激活部分的颜色
-    activeColor: {
-      type: String,
-      default: uni.$u.props.lineProgress.activeColor
-    },
-    inactiveColor: {
-      type: String,
-      default: uni.$u.props.lineProgress.color
-    },
-    // 进度百分比，数值
-    percentage: {
-      type: [String, Number],
-      default: uni.$u.props.lineProgress.inactiveColor
-    },
-    // 是否在进度条内部显示百分比的值
-    showText: {
-      type: Boolean,
-      default: uni.$u.props.lineProgress.showText
-    },
-    // 进度条的高度，单位px
-    height: {
-      type: [String, Number],
-      default: uni.$u.props.lineProgress.height
-    }
-  }
-};
-exports.default = _default;
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
-
-/***/ }),
+/* 275 */,
 /* 276 */,
 /* 277 */,
 /* 278 */,
 /* 279 */,
 /* 280 */,
 /* 281 */,
-/* 282 */,
-/* 283 */
-/*!********************************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/components/u-cell-group/props.js ***!
-  \********************************************************************************************************/
+/* 282 */
+/*!****************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/components/u-popup/props.js ***!
+  \****************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -20179,15 +20034,80 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = void 0;
 var _default = {
   props: {
-    // 分组标题
-    title: {
-      type: String,
-      default: uni.$u.props.cellGroup.title
-    },
-    // 是否显示外边框
-    border: {
+    // 是否展示弹窗
+    show: {
       type: Boolean,
-      default: uni.$u.props.cellGroup.border
+      default: uni.$u.props.popup.show
+    },
+    // 是否显示遮罩
+    overlay: {
+      type: Boolean,
+      default: uni.$u.props.popup.overlay
+    },
+    // 弹出的方向，可选值为 top bottom right left center
+    mode: {
+      type: String,
+      default: uni.$u.props.popup.mode
+    },
+    // 动画时长，单位ms
+    duration: {
+      type: [String, Number],
+      default: uni.$u.props.popup.duration
+    },
+    // 是否显示关闭图标
+    closeable: {
+      type: Boolean,
+      default: uni.$u.props.popup.closeable
+    },
+    // 自定义遮罩的样式
+    overlayStyle: {
+      type: [Object, String],
+      default: uni.$u.props.popup.overlayStyle
+    },
+    // 点击遮罩是否关闭弹窗
+    closeOnClickOverlay: {
+      type: Boolean,
+      default: uni.$u.props.popup.closeOnClickOverlay
+    },
+    // 层级
+    zIndex: {
+      type: [String, Number],
+      default: uni.$u.props.popup.zIndex
+    },
+    // 是否为iPhoneX留出底部安全距离
+    safeAreaInsetBottom: {
+      type: Boolean,
+      default: uni.$u.props.popup.safeAreaInsetBottom
+    },
+    // 是否留出顶部安全距离（状态栏高度）
+    safeAreaInsetTop: {
+      type: Boolean,
+      default: uni.$u.props.popup.safeAreaInsetTop
+    },
+    // 自定义关闭图标位置，top-left为左上角，top-right为右上角，bottom-left为左下角，bottom-right为右下角
+    closeIconPos: {
+      type: String,
+      default: uni.$u.props.popup.closeIconPos
+    },
+    // 是否显示圆角
+    round: {
+      type: [Boolean, String, Number],
+      default: uni.$u.props.popup.round
+    },
+    // mode=center，也即中部弹出时，是否使用缩放模式
+    zoom: {
+      type: Boolean,
+      default: uni.$u.props.popup.zoom
+    },
+    // 弹窗背景色，设置为transparent可去除白色背景
+    bgColor: {
+      type: String,
+      default: uni.$u.props.popup.bgColor
+    },
+    // 遮罩的透明度，0-1之间
+    overlayOpacity: {
+      type: [Number, String],
+      default: uni.$u.props.popup.overlayOpacity
     }
   }
 };
@@ -20195,419 +20115,17 @@ exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
+/* 283 */,
 /* 284 */,
 /* 285 */,
 /* 286 */,
 /* 287 */,
 /* 288 */,
 /* 289 */,
-/* 290 */,
-/* 291 */
-/*!**************************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/components/u-cell/props.js ***!
-  \**************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-var _default2 = {
-  props: {
-    // 标题
-    title: {
-      type: [String, Number],
-      default: uni.$u.props.cell.title
-    },
-    // 标题下方的描述信息
-    label: {
-      type: [String, Number],
-      default: uni.$u.props.cell.label
-    },
-    // 右侧的内容
-    value: {
-      type: [String, Number],
-      default: uni.$u.props.cell.value
-    },
-    // 左侧图标名称，或者图片链接(本地文件建议使用绝对地址)
-    icon: {
-      type: String,
-      default: uni.$u.props.cell.icon
-    },
-    // 是否禁用cell
-    disabled: {
-      type: Boolean,
-      default: uni.$u.props.cell.disabled
-    },
-    // 是否显示下边框
-    border: {
-      type: Boolean,
-      default: uni.$u.props.cell.border
-    },
-    // 内容是否垂直居中(主要是针对右侧的value部分)
-    center: {
-      type: Boolean,
-      default: uni.$u.props.cell.center
-    },
-    // 点击后跳转的URL地址
-    url: {
-      type: String,
-      default: uni.$u.props.cell.url
-    },
-    // 链接跳转的方式，内部使用的是uView封装的route方法，可能会进行拦截操作
-    linkType: {
-      type: String,
-      default: uni.$u.props.cell.linkType
-    },
-    // 是否开启点击反馈(表现为点击时加上灰色背景)
-    clickable: {
-      type: Boolean,
-      default: uni.$u.props.cell.clickable
-    },
-    // 是否展示右侧箭头并开启点击反馈
-    isLink: {
-      type: Boolean,
-      default: uni.$u.props.cell.isLink
-    },
-    // 是否显示表单状态下的必填星号(此组件可能会内嵌入input组件)
-    required: {
-      type: Boolean,
-      default: uni.$u.props.cell.required
-    },
-    // 右侧的图标箭头
-    rightIcon: {
-      type: String,
-      default: uni.$u.props.cell.rightIcon
-    },
-    // 右侧箭头的方向，可选值为：left，up，down
-    arrowDirection: {
-      type: String,
-      default: uni.$u.props.cell.arrowDirection
-    },
-    // 左侧图标样式
-    iconStyle: {
-      type: [Object, String],
-      default: function _default() {
-        return uni.$u.props.cell.iconStyle;
-      }
-    },
-    // 右侧箭头图标的样式
-    rightIconStyle: {
-      type: [Object, String],
-      default: function _default() {
-        return uni.$u.props.cell.rightIconStyle;
-      }
-    },
-    // 标题的样式
-    titleStyle: {
-      type: [Object, String],
-      default: function _default() {
-        return uni.$u.props.cell.titleStyle;
-      }
-    },
-    // 单位元的大小，可选值为large
-    size: {
-      type: String,
-      default: uni.$u.props.cell.size
-    },
-    // 点击cell是否阻止事件传播
-    stop: {
-      type: Boolean,
-      default: uni.$u.props.cell.stop
-    },
-    // 标识符，cell被点击时返回
-    name: {
-      type: [Number, String],
-      default: uni.$u.props.cell.name
-    }
-  }
-};
-exports.default = _default2;
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
-
-/***/ }),
-/* 292 */,
-/* 293 */,
-/* 294 */,
-/* 295 */,
-/* 296 */,
-/* 297 */,
-/* 298 */,
-/* 299 */
-/*!************************************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/components/u-checkbox-group/props.js ***!
-  \************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-var _default = {
-  props: {
-    // 标识符
-    name: {
-      type: String,
-      default: uni.$u.props.checkboxGroup.name
-    },
-    // 绑定的值
-    value: {
-      type: Array,
-      default: uni.$u.props.checkboxGroup.value
-    },
-    // 形状，circle-圆形，square-方形
-    shape: {
-      type: String,
-      default: uni.$u.props.checkboxGroup.shape
-    },
-    // 是否禁用全部checkbox
-    disabled: {
-      type: Boolean,
-      default: uni.$u.props.checkboxGroup.disabled
-    },
-    // 选中状态下的颜色，如设置此值，将会覆盖parent的activeColor值
-    activeColor: {
-      type: String,
-      default: uni.$u.props.checkboxGroup.activeColor
-    },
-    // 未选中的颜色
-    inactiveColor: {
-      type: String,
-      default: uni.$u.props.checkboxGroup.inactiveColor
-    },
-    // 整个组件的尺寸，默认px
-    size: {
-      type: [String, Number],
-      default: uni.$u.props.checkboxGroup.size
-    },
-    // 布局方式，row-横向，column-纵向
-    placement: {
-      type: String,
-      default: uni.$u.props.checkboxGroup.placement
-    },
-    // label的字体大小，px单位
-    labelSize: {
-      type: [String, Number],
-      default: uni.$u.props.checkboxGroup.labelSize
-    },
-    // label的字体颜色
-    labelColor: {
-      type: [String],
-      default: uni.$u.props.checkboxGroup.labelColor
-    },
-    // 是否禁止点击文本操作
-    labelDisabled: {
-      type: Boolean,
-      default: uni.$u.props.checkboxGroup.labelDisabled
-    },
-    // 图标颜色
-    iconColor: {
-      type: String,
-      default: uni.$u.props.checkboxGroup.iconColor
-    },
-    // 图标的大小，单位px
-    iconSize: {
-      type: [String, Number],
-      default: uni.$u.props.checkboxGroup.iconSize
-    },
-    // 勾选图标的对齐方式，left-左边，right-右边
-    iconPlacement: {
-      type: String,
-      default: uni.$u.props.checkboxGroup.iconPlacement
-    },
-    // 竖向配列时，是否显示下划线
-    borderBottom: {
-      type: Boolean,
-      default: uni.$u.props.checkboxGroup.borderBottom
-    }
-  }
-};
-exports.default = _default;
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
-
-/***/ }),
-/* 300 */,
-/* 301 */,
-/* 302 */,
-/* 303 */,
-/* 304 */,
-/* 305 */,
-/* 306 */,
-/* 307 */
-/*!******************************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/components/u-checkbox/props.js ***!
-  \******************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-var _default = {
-  props: {
-    // checkbox的名称
-    name: {
-      type: [String, Number, Boolean],
-      default: uni.$u.props.checkbox.name
-    },
-    // 形状，square为方形，circle为圆型
-    shape: {
-      type: String,
-      default: uni.$u.props.checkbox.shape
-    },
-    // 整体的大小
-    size: {
-      type: [String, Number],
-      default: uni.$u.props.checkbox.size
-    },
-    // 是否默认选中
-    checked: {
-      type: Boolean,
-      default: uni.$u.props.checkbox.checked
-    },
-    // 是否禁用
-    disabled: {
-      type: [String, Boolean],
-      default: uni.$u.props.checkbox.disabled
-    },
-    // 选中状态下的颜色，如设置此值，将会覆盖parent的activeColor值
-    activeColor: {
-      type: String,
-      default: uni.$u.props.checkbox.activeColor
-    },
-    // 未选中的颜色
-    inactiveColor: {
-      type: String,
-      default: uni.$u.props.checkbox.inactiveColor
-    },
-    // 图标的大小，单位px
-    iconSize: {
-      type: [String, Number],
-      default: uni.$u.props.checkbox.iconSize
-    },
-    // 图标颜色
-    iconColor: {
-      type: String,
-      default: uni.$u.props.checkbox.iconColor
-    },
-    // label提示文字，因为nvue下，直接slot进来的文字，由于特殊的结构，无法修改样式
-    label: {
-      type: [String, Number],
-      default: uni.$u.props.checkbox.label
-    },
-    // label的字体大小，px单位
-    labelSize: {
-      type: [String, Number],
-      default: uni.$u.props.checkbox.labelSize
-    },
-    // label的颜色
-    labelColor: {
-      type: String,
-      default: uni.$u.props.checkbox.labelColor
-    },
-    // 是否禁止点击提示语选中复选框
-    labelDisabled: {
-      type: [String, Boolean],
-      default: uni.$u.props.checkbox.labelDisabled
-    }
-  }
-};
-exports.default = _default;
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
-
-/***/ }),
-/* 308 */,
-/* 309 */,
-/* 310 */,
-/* 311 */,
-/* 312 */,
-/* 313 */,
-/* 314 */,
-/* 315 */
-/*!*****************************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/components/u-divider/props.js ***!
-  \*****************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-var _default = {
-  props: {
-    // 是否虚线
-    dashed: {
-      type: Boolean,
-      default: uni.$u.props.divider.dashed
-    },
-    // 是否细线
-    hairline: {
-      type: Boolean,
-      default: uni.$u.props.divider.hairline
-    },
-    // 是否以点替代文字，优先于text字段起作用
-    dot: {
-      type: Boolean,
-      default: uni.$u.props.divider.dot
-    },
-    // 内容文本的位置，left-左边，center-中间，right-右边
-    textPosition: {
-      type: String,
-      default: uni.$u.props.divider.textPosition
-    },
-    // 文本内容
-    text: {
-      type: [String, Number],
-      default: uni.$u.props.divider.text
-    },
-    // 文本大小
-    textSize: {
-      type: [String, Number],
-      default: uni.$u.props.divider.textSize
-    },
-    // 文本颜色
-    textColor: {
-      type: String,
-      default: uni.$u.props.divider.textColor
-    },
-    // 线条颜色
-    lineColor: {
-      type: String,
-      default: uni.$u.props.divider.lineColor
-    }
-  }
-};
-exports.default = _default;
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
-
-/***/ }),
-/* 316 */,
-/* 317 */,
-/* 318 */,
-/* 319 */,
-/* 320 */,
-/* 321 */,
-/* 322 */,
-/* 323 */
-/*!********************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/libs/mixin/button.js ***!
-  \********************************************************************************************/
+/* 290 */
+/*!*********************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/libs/mixin/button.js ***!
+  \*********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -20634,10 +20152,10 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 324 */
-/*!**********************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/libs/mixin/openType.js ***!
-  \**********************************************************************************************/
+/* 291 */
+/*!***********************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/libs/mixin/openType.js ***!
+  \***********************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -20676,10 +20194,10 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 325 */
-/*!****************************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/components/u-button/props.js ***!
-  \****************************************************************************************************/
+/* 292 */
+/*!*****************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/components/u-button/props.js ***!
+  \*****************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -20855,17 +20373,17 @@ exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 326 */,
-/* 327 */,
-/* 328 */,
-/* 329 */,
-/* 330 */,
-/* 331 */,
-/* 332 */,
-/* 333 */
-/*!***************************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/components/u-modal/props.js ***!
-  \***************************************************************************************************/
+/* 293 */,
+/* 294 */,
+/* 295 */,
+/* 296 */,
+/* 297 */,
+/* 298 */,
+/* 299 */,
+/* 300 */
+/*!****************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/components/u-modal/props.js ***!
+  \****************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -20969,17 +20487,730 @@ exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
+/* 301 */,
+/* 302 */,
+/* 303 */,
+/* 304 */,
+/* 305 */,
+/* 306 */,
+/* 307 */,
+/* 308 */
+/*!**************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/components/u-tag/props.js ***!
+  \**************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uni) {
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _default = {
+  props: {
+    // 标签类型info、primary、success、warning、error
+    type: {
+      type: String,
+      default: uni.$u.props.tag.type
+    },
+    // 不可用
+    disabled: {
+      type: [Boolean, String],
+      default: uni.$u.props.tag.disabled
+    },
+    // 标签的大小，large，medium，mini
+    size: {
+      type: String,
+      default: uni.$u.props.tag.size
+    },
+    // tag的形状，circle（两边半圆形）, square（方形，带圆角）
+    shape: {
+      type: String,
+      default: uni.$u.props.tag.shape
+    },
+    // 标签文字
+    text: {
+      type: [String, Number],
+      default: uni.$u.props.tag.text
+    },
+    // 背景颜色，默认为空字符串，即不处理
+    bgColor: {
+      type: String,
+      default: uni.$u.props.tag.bgColor
+    },
+    // 标签字体颜色，默认为空字符串，即不处理
+    color: {
+      type: String,
+      default: uni.$u.props.tag.color
+    },
+    // 标签的边框颜色
+    borderColor: {
+      type: String,
+      default: uni.$u.props.tag.borderColor
+    },
+    // 关闭按钮图标的颜色
+    closeColor: {
+      type: String,
+      default: uni.$u.props.tag.closeColor
+    },
+    // 点击时返回的索引值，用于区分例遍的数组哪个元素被点击了
+    name: {
+      type: [String, Number],
+      default: uni.$u.props.tag.name
+    },
+    // // 模式选择，dark|light|plain
+    // mode: {
+    // 	type: String,
+    // 	default: 'light'
+    // },
+    // 镂空时是否填充背景色
+    plainFill: {
+      type: Boolean,
+      default: uni.$u.props.tag.plainFill
+    },
+    // 是否镂空
+    plain: {
+      type: Boolean,
+      default: uni.$u.props.tag.plain
+    },
+    // 是否可关闭
+    closable: {
+      type: Boolean,
+      default: uni.$u.props.tag.closable
+    },
+    // 是否显示
+    show: {
+      type: Boolean,
+      default: uni.$u.props.tag.show
+    },
+    // 内置图标，或绝对路径的图片
+    icon: {
+      type: String,
+      default: uni.$u.props.tag.icon
+    }
+  }
+};
+exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
+
+/***/ }),
+/* 309 */,
+/* 310 */,
+/* 311 */,
+/* 312 */,
+/* 313 */,
+/* 314 */,
+/* 315 */,
+/* 316 */,
+/* 317 */,
+/* 318 */,
+/* 319 */,
+/* 320 */,
+/* 321 */,
+/* 322 */,
+/* 323 */
+/*!*****************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/components/u-avatar/props.js ***!
+  \*****************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uni) {
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _default = {
+  props: {
+    // 头像图片路径(不能为相对路径)
+    src: {
+      type: String,
+      default: uni.$u.props.avatar.src
+    },
+    // 头像形状，circle-圆形，square-方形
+    shape: {
+      type: String,
+      default: uni.$u.props.avatar.shape
+    },
+    // 头像尺寸
+    size: {
+      type: [String, Number],
+      default: uni.$u.props.avatar.size
+    },
+    // 裁剪模式
+    mode: {
+      type: String,
+      default: uni.$u.props.avatar.mode
+    },
+    // 显示的文字
+    text: {
+      type: String,
+      default: uni.$u.props.avatar.text
+    },
+    // 背景色
+    bgColor: {
+      type: String,
+      default: uni.$u.props.avatar.bgColor
+    },
+    // 文字颜色
+    color: {
+      type: String,
+      default: uni.$u.props.avatar.color
+    },
+    // 文字大小
+    fontSize: {
+      type: [String, Number],
+      default: uni.$u.props.avatar.fontSize
+    },
+    // 显示的图标
+    icon: {
+      type: String,
+      default: uni.$u.props.avatar.icon
+    },
+    // 显示小程序头像，只对百度，微信，QQ小程序有效
+    mpAvatar: {
+      type: Boolean,
+      default: uni.$u.props.avatar.mpAvatar
+    },
+    // 是否使用随机背景色
+    randomBgColor: {
+      type: Boolean,
+      default: uni.$u.props.avatar.randomBgColor
+    },
+    // 加载失败的默认头像(组件有内置默认图片)
+    defaultUrl: {
+      type: String,
+      default: uni.$u.props.avatar.defaultUrl
+    },
+    // 如果配置了randomBgColor为true，且配置了此值，则从默认的背景色数组中取出对应索引的颜色值，取值0-19之间
+    colorIndex: {
+      type: [String, Number],
+      // 校验参数规则，索引在0-19之间
+      validator: function validator(n) {
+        return uni.$u.test.range(n, [0, 19]) || n === '';
+      },
+      default: uni.$u.props.avatar.colorIndex
+    },
+    // 组件标识符
+    name: {
+      type: String,
+      default: uni.$u.props.avatar.name
+    }
+  }
+};
+exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
+
+/***/ }),
+/* 324 */,
+/* 325 */,
+/* 326 */,
+/* 327 */,
+/* 328 */,
+/* 329 */,
+/* 330 */,
+/* 331 */
+/*!************************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/components/u-line-progress/props.js ***!
+  \************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uni) {
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _default = {
+  props: {
+    // 激活部分的颜色
+    activeColor: {
+      type: String,
+      default: uni.$u.props.lineProgress.activeColor
+    },
+    inactiveColor: {
+      type: String,
+      default: uni.$u.props.lineProgress.color
+    },
+    // 进度百分比，数值
+    percentage: {
+      type: [String, Number],
+      default: uni.$u.props.lineProgress.inactiveColor
+    },
+    // 是否在进度条内部显示百分比的值
+    showText: {
+      type: Boolean,
+      default: uni.$u.props.lineProgress.showText
+    },
+    // 进度条的高度，单位px
+    height: {
+      type: [String, Number],
+      default: uni.$u.props.lineProgress.height
+    }
+  }
+};
+exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
+
+/***/ }),
+/* 332 */,
+/* 333 */,
 /* 334 */,
 /* 335 */,
 /* 336 */,
 /* 337 */,
 /* 338 */,
-/* 339 */,
+/* 339 */
+/*!*********************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/components/u-cell-group/props.js ***!
+  \*********************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uni) {
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _default = {
+  props: {
+    // 分组标题
+    title: {
+      type: String,
+      default: uni.$u.props.cellGroup.title
+    },
+    // 是否显示外边框
+    border: {
+      type: Boolean,
+      default: uni.$u.props.cellGroup.border
+    }
+  }
+};
+exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
+
+/***/ }),
 /* 340 */,
-/* 341 */
-/*!**************************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/components/u-grid/props.js ***!
-  \**************************************************************************************************/
+/* 341 */,
+/* 342 */,
+/* 343 */,
+/* 344 */,
+/* 345 */,
+/* 346 */,
+/* 347 */
+/*!***************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/components/u-cell/props.js ***!
+  \***************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uni) {
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _default2 = {
+  props: {
+    // 标题
+    title: {
+      type: [String, Number],
+      default: uni.$u.props.cell.title
+    },
+    // 标题下方的描述信息
+    label: {
+      type: [String, Number],
+      default: uni.$u.props.cell.label
+    },
+    // 右侧的内容
+    value: {
+      type: [String, Number],
+      default: uni.$u.props.cell.value
+    },
+    // 左侧图标名称，或者图片链接(本地文件建议使用绝对地址)
+    icon: {
+      type: String,
+      default: uni.$u.props.cell.icon
+    },
+    // 是否禁用cell
+    disabled: {
+      type: Boolean,
+      default: uni.$u.props.cell.disabled
+    },
+    // 是否显示下边框
+    border: {
+      type: Boolean,
+      default: uni.$u.props.cell.border
+    },
+    // 内容是否垂直居中(主要是针对右侧的value部分)
+    center: {
+      type: Boolean,
+      default: uni.$u.props.cell.center
+    },
+    // 点击后跳转的URL地址
+    url: {
+      type: String,
+      default: uni.$u.props.cell.url
+    },
+    // 链接跳转的方式，内部使用的是uView封装的route方法，可能会进行拦截操作
+    linkType: {
+      type: String,
+      default: uni.$u.props.cell.linkType
+    },
+    // 是否开启点击反馈(表现为点击时加上灰色背景)
+    clickable: {
+      type: Boolean,
+      default: uni.$u.props.cell.clickable
+    },
+    // 是否展示右侧箭头并开启点击反馈
+    isLink: {
+      type: Boolean,
+      default: uni.$u.props.cell.isLink
+    },
+    // 是否显示表单状态下的必填星号(此组件可能会内嵌入input组件)
+    required: {
+      type: Boolean,
+      default: uni.$u.props.cell.required
+    },
+    // 右侧的图标箭头
+    rightIcon: {
+      type: String,
+      default: uni.$u.props.cell.rightIcon
+    },
+    // 右侧箭头的方向，可选值为：left，up，down
+    arrowDirection: {
+      type: String,
+      default: uni.$u.props.cell.arrowDirection
+    },
+    // 左侧图标样式
+    iconStyle: {
+      type: [Object, String],
+      default: function _default() {
+        return uni.$u.props.cell.iconStyle;
+      }
+    },
+    // 右侧箭头图标的样式
+    rightIconStyle: {
+      type: [Object, String],
+      default: function _default() {
+        return uni.$u.props.cell.rightIconStyle;
+      }
+    },
+    // 标题的样式
+    titleStyle: {
+      type: [Object, String],
+      default: function _default() {
+        return uni.$u.props.cell.titleStyle;
+      }
+    },
+    // 单位元的大小，可选值为large
+    size: {
+      type: String,
+      default: uni.$u.props.cell.size
+    },
+    // 点击cell是否阻止事件传播
+    stop: {
+      type: Boolean,
+      default: uni.$u.props.cell.stop
+    },
+    // 标识符，cell被点击时返回
+    name: {
+      type: [Number, String],
+      default: uni.$u.props.cell.name
+    }
+  }
+};
+exports.default = _default2;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
+
+/***/ }),
+/* 348 */,
+/* 349 */,
+/* 350 */,
+/* 351 */,
+/* 352 */,
+/* 353 */,
+/* 354 */,
+/* 355 */
+/*!*************************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/components/u-checkbox-group/props.js ***!
+  \*************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uni) {
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _default = {
+  props: {
+    // 标识符
+    name: {
+      type: String,
+      default: uni.$u.props.checkboxGroup.name
+    },
+    // 绑定的值
+    value: {
+      type: Array,
+      default: uni.$u.props.checkboxGroup.value
+    },
+    // 形状，circle-圆形，square-方形
+    shape: {
+      type: String,
+      default: uni.$u.props.checkboxGroup.shape
+    },
+    // 是否禁用全部checkbox
+    disabled: {
+      type: Boolean,
+      default: uni.$u.props.checkboxGroup.disabled
+    },
+    // 选中状态下的颜色，如设置此值，将会覆盖parent的activeColor值
+    activeColor: {
+      type: String,
+      default: uni.$u.props.checkboxGroup.activeColor
+    },
+    // 未选中的颜色
+    inactiveColor: {
+      type: String,
+      default: uni.$u.props.checkboxGroup.inactiveColor
+    },
+    // 整个组件的尺寸，默认px
+    size: {
+      type: [String, Number],
+      default: uni.$u.props.checkboxGroup.size
+    },
+    // 布局方式，row-横向，column-纵向
+    placement: {
+      type: String,
+      default: uni.$u.props.checkboxGroup.placement
+    },
+    // label的字体大小，px单位
+    labelSize: {
+      type: [String, Number],
+      default: uni.$u.props.checkboxGroup.labelSize
+    },
+    // label的字体颜色
+    labelColor: {
+      type: [String],
+      default: uni.$u.props.checkboxGroup.labelColor
+    },
+    // 是否禁止点击文本操作
+    labelDisabled: {
+      type: Boolean,
+      default: uni.$u.props.checkboxGroup.labelDisabled
+    },
+    // 图标颜色
+    iconColor: {
+      type: String,
+      default: uni.$u.props.checkboxGroup.iconColor
+    },
+    // 图标的大小，单位px
+    iconSize: {
+      type: [String, Number],
+      default: uni.$u.props.checkboxGroup.iconSize
+    },
+    // 勾选图标的对齐方式，left-左边，right-右边
+    iconPlacement: {
+      type: String,
+      default: uni.$u.props.checkboxGroup.iconPlacement
+    },
+    // 竖向配列时，是否显示下划线
+    borderBottom: {
+      type: Boolean,
+      default: uni.$u.props.checkboxGroup.borderBottom
+    }
+  }
+};
+exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
+
+/***/ }),
+/* 356 */,
+/* 357 */,
+/* 358 */,
+/* 359 */,
+/* 360 */,
+/* 361 */,
+/* 362 */,
+/* 363 */
+/*!*******************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/components/u-checkbox/props.js ***!
+  \*******************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uni) {
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _default = {
+  props: {
+    // checkbox的名称
+    name: {
+      type: [String, Number, Boolean],
+      default: uni.$u.props.checkbox.name
+    },
+    // 形状，square为方形，circle为圆型
+    shape: {
+      type: String,
+      default: uni.$u.props.checkbox.shape
+    },
+    // 整体的大小
+    size: {
+      type: [String, Number],
+      default: uni.$u.props.checkbox.size
+    },
+    // 是否默认选中
+    checked: {
+      type: Boolean,
+      default: uni.$u.props.checkbox.checked
+    },
+    // 是否禁用
+    disabled: {
+      type: [String, Boolean],
+      default: uni.$u.props.checkbox.disabled
+    },
+    // 选中状态下的颜色，如设置此值，将会覆盖parent的activeColor值
+    activeColor: {
+      type: String,
+      default: uni.$u.props.checkbox.activeColor
+    },
+    // 未选中的颜色
+    inactiveColor: {
+      type: String,
+      default: uni.$u.props.checkbox.inactiveColor
+    },
+    // 图标的大小，单位px
+    iconSize: {
+      type: [String, Number],
+      default: uni.$u.props.checkbox.iconSize
+    },
+    // 图标颜色
+    iconColor: {
+      type: String,
+      default: uni.$u.props.checkbox.iconColor
+    },
+    // label提示文字，因为nvue下，直接slot进来的文字，由于特殊的结构，无法修改样式
+    label: {
+      type: [String, Number],
+      default: uni.$u.props.checkbox.label
+    },
+    // label的字体大小，px单位
+    labelSize: {
+      type: [String, Number],
+      default: uni.$u.props.checkbox.labelSize
+    },
+    // label的颜色
+    labelColor: {
+      type: String,
+      default: uni.$u.props.checkbox.labelColor
+    },
+    // 是否禁止点击提示语选中复选框
+    labelDisabled: {
+      type: [String, Boolean],
+      default: uni.$u.props.checkbox.labelDisabled
+    }
+  }
+};
+exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
+
+/***/ }),
+/* 364 */,
+/* 365 */,
+/* 366 */,
+/* 367 */,
+/* 368 */,
+/* 369 */,
+/* 370 */,
+/* 371 */
+/*!******************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/components/u-divider/props.js ***!
+  \******************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uni) {
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _default = {
+  props: {
+    // 是否虚线
+    dashed: {
+      type: Boolean,
+      default: uni.$u.props.divider.dashed
+    },
+    // 是否细线
+    hairline: {
+      type: Boolean,
+      default: uni.$u.props.divider.hairline
+    },
+    // 是否以点替代文字，优先于text字段起作用
+    dot: {
+      type: Boolean,
+      default: uni.$u.props.divider.dot
+    },
+    // 内容文本的位置，left-左边，center-中间，right-右边
+    textPosition: {
+      type: String,
+      default: uni.$u.props.divider.textPosition
+    },
+    // 文本内容
+    text: {
+      type: [String, Number],
+      default: uni.$u.props.divider.text
+    },
+    // 文本大小
+    textSize: {
+      type: [String, Number],
+      default: uni.$u.props.divider.textSize
+    },
+    // 文本颜色
+    textColor: {
+      type: String,
+      default: uni.$u.props.divider.textColor
+    },
+    // 线条颜色
+    lineColor: {
+      type: String,
+      default: uni.$u.props.divider.lineColor
+    }
+  }
+};
+exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
+
+/***/ }),
+/* 372 */,
+/* 373 */,
+/* 374 */,
+/* 375 */,
+/* 376 */,
+/* 377 */,
+/* 378 */,
+/* 379 */
+/*!***************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/components/u-grid/props.js ***!
+  \***************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -21013,17 +21244,17 @@ exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 342 */,
-/* 343 */,
-/* 344 */,
-/* 345 */,
-/* 346 */,
-/* 347 */,
-/* 348 */,
-/* 349 */
-/*!*******************************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/components/u-grid-item/props.js ***!
-  \*******************************************************************************************************/
+/* 380 */,
+/* 381 */,
+/* 382 */,
+/* 383 */,
+/* 384 */,
+/* 385 */,
+/* 386 */,
+/* 387 */
+/*!********************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/components/u-grid-item/props.js ***!
+  \********************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -21052,24 +21283,24 @@ exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 350 */,
-/* 351 */,
-/* 352 */,
-/* 353 */,
-/* 354 */,
-/* 355 */,
-/* 356 */,
-/* 357 */,
-/* 358 */,
-/* 359 */,
-/* 360 */,
-/* 361 */,
-/* 362 */,
-/* 363 */,
-/* 364 */
-/*!***************************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/components/u-badge/props.js ***!
-  \***************************************************************************************************/
+/* 388 */,
+/* 389 */,
+/* 390 */,
+/* 391 */,
+/* 392 */,
+/* 393 */,
+/* 394 */,
+/* 395 */,
+/* 396 */,
+/* 397 */,
+/* 398 */,
+/* 399 */,
+/* 400 */,
+/* 401 */,
+/* 402 */
+/*!****************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/components/u-badge/props.js ***!
+  \****************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -21156,17 +21387,17 @@ exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 365 */,
-/* 366 */,
-/* 367 */,
-/* 368 */,
-/* 369 */,
-/* 370 */,
-/* 371 */,
-/* 372 */
-/*!****************************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/components/u-tabbar/props.js ***!
-  \****************************************************************************************************/
+/* 403 */,
+/* 404 */,
+/* 405 */,
+/* 406 */,
+/* 407 */,
+/* 408 */,
+/* 409 */,
+/* 410 */
+/*!*****************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/components/u-tabbar/props.js ***!
+  \*****************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -21225,17 +21456,17 @@ exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 373 */,
-/* 374 */,
-/* 375 */,
-/* 376 */,
-/* 377 */,
-/* 378 */,
-/* 379 */,
-/* 380 */
-/*!*********************************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/components/u-tabbar-item/props.js ***!
-  \*********************************************************************************************************/
+/* 411 */,
+/* 412 */,
+/* 413 */,
+/* 414 */,
+/* 415 */,
+/* 416 */,
+/* 417 */,
+/* 418 */
+/*!**********************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/components/u-tabbar-item/props.js ***!
+  \**********************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -21284,24 +21515,450 @@ exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 381 */,
-/* 382 */,
-/* 383 */,
-/* 384 */,
-/* 385 */,
-/* 386 */,
-/* 387 */,
-/* 388 */,
-/* 389 */,
-/* 390 */,
-/* 391 */,
-/* 392 */,
-/* 393 */,
-/* 394 */,
-/* 395 */
-/*!**************************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/components/u-icon/icons.js ***!
-  \**************************************************************************************************/
+/* 419 */,
+/* 420 */,
+/* 421 */,
+/* 422 */,
+/* 423 */,
+/* 424 */,
+/* 425 */,
+/* 426 */
+/*!******************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/components/u-overlay/props.js ***!
+  \******************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uni) {
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _default = {
+  props: {
+    // 是否显示遮罩
+    show: {
+      type: Boolean,
+      default: uni.$u.props.overlay.show
+    },
+    // 层级z-index
+    zIndex: {
+      type: [String, Number],
+      default: uni.$u.props.overlay.zIndex
+    },
+    // 遮罩的过渡时间，单位为ms
+    duration: {
+      type: [String, Number],
+      default: uni.$u.props.overlay.duration
+    },
+    // 不透明度值，当做rgba的第四个参数
+    opacity: {
+      type: [String, Number],
+      default: uni.$u.props.overlay.opacity
+    }
+  }
+};
+exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
+
+/***/ }),
+/* 427 */,
+/* 428 */,
+/* 429 */,
+/* 430 */,
+/* 431 */,
+/* 432 */,
+/* 433 */,
+/* 434 */
+/*!*********************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/components/u-transition/props.js ***!
+  \*********************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uni) {
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _default = {
+  props: {
+    // 是否展示组件
+    show: {
+      type: Boolean,
+      default: uni.$u.props.transition.show
+    },
+    // 使用的动画模式
+    mode: {
+      type: String,
+      default: uni.$u.props.transition.mode
+    },
+    // 动画的执行时间，单位ms
+    duration: {
+      type: [String, Number],
+      default: uni.$u.props.transition.duration
+    },
+    // 使用的动画过渡函数
+    timingFunction: {
+      type: String,
+      default: uni.$u.props.transition.timingFunction
+    }
+  }
+};
+exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
+
+/***/ }),
+/* 435 */
+/*!**************************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/components/u-transition/transition.js ***!
+  \**************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _regenerator = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/regenerator */ 49));
+var _asyncToGenerator2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/asyncToGenerator */ 51));
+var _nvueAniMap = _interopRequireDefault(__webpack_require__(/*! ./nvue.ani-map.js */ 436));
+// 定义一个一定时间后自动成功的promise，让调用nextTick方法处，进入下一个then方法
+var nextTick = function nextTick() {
+  return new Promise(function (resolve) {
+    return setTimeout(resolve, 1000 / 50);
+  });
+};
+// nvue动画模块实现细节抽离在外部文件
+
+// 定义类名，通过给元素动态切换类名，赋予元素一定的css动画样式
+var getClassNames = function getClassNames(name) {
+  return {
+    enter: "u-".concat(name, "-enter u-").concat(name, "-enter-active"),
+    'enter-to': "u-".concat(name, "-enter-to u-").concat(name, "-enter-active"),
+    leave: "u-".concat(name, "-leave u-").concat(name, "-leave-active"),
+    'leave-to': "u-".concat(name, "-leave-to u-").concat(name, "-leave-active")
+  };
+};
+var _default = {
+  methods: {
+    // 组件被点击发出事件
+    clickHandler: function clickHandler() {
+      this.$emit('click');
+    },
+    // vue版本的组件进场处理
+    vueEnter: function vueEnter() {
+      var _this = this;
+      // 动画进入时的类名
+      var classNames = getClassNames(this.mode);
+      // 定义状态和发出动画进入前事件
+      this.status = 'enter';
+      this.$emit('beforeEnter');
+      this.inited = true;
+      this.display = true;
+      this.classes = classNames.enter;
+      this.$nextTick( /*#__PURE__*/(0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee() {
+        return _regenerator.default.wrap(function _callee$(_context) {
+          while (1) {
+            switch (_context.prev = _context.next) {
+              case 0:
+                // 标识动画尚未结束
+                _this.$emit('enter');
+                _this.transitionEnded = false;
+                // 组件动画进入后触发的事件
+                _this.$emit('afterEnter');
+                // 赋予组件enter-to类名
+                _this.classes = classNames['enter-to'];
+              case 4:
+              case "end":
+                return _context.stop();
+            }
+          }
+        }, _callee);
+      })));
+    },
+    // 动画离场处理
+    vueLeave: function vueLeave() {
+      var _this2 = this;
+      // 如果不是展示状态，无需执行逻辑
+      if (!this.display) return;
+      var classNames = getClassNames(this.mode);
+      // 标记离开状态和发出事件
+      this.status = 'leave';
+      this.$emit('beforeLeave');
+      // 获得类名
+      this.classes = classNames.leave;
+      this.$nextTick(function () {
+        // 动画正在离场的状态
+        _this2.transitionEnded = false;
+        _this2.$emit('leave');
+        // 组件执行动画，到了执行的执行时间后，执行一些额外处理
+        setTimeout(_this2.onTransitionEnd, _this2.duration);
+        _this2.classes = classNames['leave-to'];
+      });
+    },
+    // 完成过渡后触发
+    onTransitionEnd: function onTransitionEnd() {
+      // 如果已经是结束的状态，无需再处理
+      if (this.transitionEnded) return;
+      this.transitionEnded = true;
+      // 发出组件动画执行后的事件
+      this.$emit(this.status === 'leave' ? 'afterLeave' : 'afterEnter');
+      if (!this.show && this.display) {
+        this.display = false;
+        this.inited = false;
+      }
+    }
+  }
+};
+exports.default = _default;
+
+/***/ }),
+/* 436 */
+/*!****************************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/components/u-transition/nvue.ani-map.js ***!
+  \****************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _default = {
+  fade: {
+    enter: {
+      opacity: 0
+    },
+    'enter-to': {
+      opacity: 1
+    },
+    leave: {
+      opacity: 1
+    },
+    'leave-to': {
+      opacity: 0
+    }
+  },
+  'fade-up': {
+    enter: {
+      opacity: 0,
+      transform: 'translateY(100%)'
+    },
+    'enter-to': {
+      opacity: 1,
+      transform: 'translateY(0)'
+    },
+    leave: {
+      opacity: 1,
+      transform: 'translateY(0)'
+    },
+    'leave-to': {
+      opacity: 0,
+      transform: 'translateY(100%)'
+    }
+  },
+  'fade-down': {
+    enter: {
+      opacity: 0,
+      transform: 'translateY(-100%)'
+    },
+    'enter-to': {
+      opacity: 1,
+      transform: 'translateY(0)'
+    },
+    leave: {
+      opacity: 1,
+      transform: 'translateY(0)'
+    },
+    'leave-to': {
+      opacity: 0,
+      transform: 'translateY(-100%)'
+    }
+  },
+  'fade-left': {
+    enter: {
+      opacity: 0,
+      transform: 'translateX(-100%)'
+    },
+    'enter-to': {
+      opacity: 1,
+      transform: 'translateY(0)'
+    },
+    leave: {
+      opacity: 1,
+      transform: 'translateY(0)'
+    },
+    'leave-to': {
+      opacity: 0,
+      transform: 'translateX(-100%)'
+    }
+  },
+  'fade-right': {
+    enter: {
+      opacity: 0,
+      transform: 'translateX(100%)'
+    },
+    'enter-to': {
+      opacity: 1,
+      transform: 'translateY(0)'
+    },
+    leave: {
+      opacity: 1,
+      transform: 'translateY(0)'
+    },
+    'leave-to': {
+      opacity: 0,
+      transform: 'translateX(100%)'
+    }
+  },
+  'slide-up': {
+    enter: {
+      transform: 'translateY(100%)'
+    },
+    'enter-to': {
+      transform: 'translateY(0)'
+    },
+    leave: {
+      transform: 'translateY(0)'
+    },
+    'leave-to': {
+      transform: 'translateY(100%)'
+    }
+  },
+  'slide-down': {
+    enter: {
+      transform: 'translateY(-100%)'
+    },
+    'enter-to': {
+      transform: 'translateY(0)'
+    },
+    leave: {
+      transform: 'translateY(0)'
+    },
+    'leave-to': {
+      transform: 'translateY(-100%)'
+    }
+  },
+  'slide-left': {
+    enter: {
+      transform: 'translateX(-100%)'
+    },
+    'enter-to': {
+      transform: 'translateY(0)'
+    },
+    leave: {
+      transform: 'translateY(0)'
+    },
+    'leave-to': {
+      transform: 'translateX(-100%)'
+    }
+  },
+  'slide-right': {
+    enter: {
+      transform: 'translateX(100%)'
+    },
+    'enter-to': {
+      transform: 'translateY(0)'
+    },
+    leave: {
+      transform: 'translateY(0)'
+    },
+    'leave-to': {
+      transform: 'translateX(100%)'
+    }
+  },
+  zoom: {
+    enter: {
+      transform: 'scale(0.95)'
+    },
+    'enter-to': {
+      transform: 'scale(1)'
+    },
+    leave: {
+      transform: 'scale(1)'
+    },
+    'leave-to': {
+      transform: 'scale(0.95)'
+    }
+  },
+  'fade-zoom': {
+    enter: {
+      opacity: 0,
+      transform: 'scale(0.95)'
+    },
+    'enter-to': {
+      opacity: 1,
+      transform: 'scale(1)'
+    },
+    leave: {
+      opacity: 1,
+      transform: 'scale(1)'
+    },
+    'leave-to': {
+      opacity: 0,
+      transform: 'scale(0.95)'
+    }
+  }
+};
+exports.default = _default;
+
+/***/ }),
+/* 437 */,
+/* 438 */,
+/* 439 */,
+/* 440 */,
+/* 441 */,
+/* 442 */,
+/* 443 */,
+/* 444 */
+/*!*********************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/components/u-status-bar/props.js ***!
+  \*********************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uni) {
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _default = {
+  props: {
+    bgColor: {
+      type: String,
+      default: uni.$u.props.statusBar.bgColor
+    }
+  }
+};
+exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
+
+/***/ }),
+/* 445 */,
+/* 446 */,
+/* 447 */,
+/* 448 */,
+/* 449 */,
+/* 450 */,
+/* 451 */,
+/* 452 */
+/*!***************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/components/u-icon/icons.js ***!
+  \***************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -21529,10 +22186,10 @@ var _default = {
 exports.default = _default;
 
 /***/ }),
-/* 396 */
-/*!**************************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/components/u-icon/props.js ***!
-  \**************************************************************************************************/
+/* 453 */
+/*!***************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/components/u-icon/props.js ***!
+  \***************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -21636,17 +22293,193 @@ exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 397 */,
-/* 398 */,
-/* 399 */,
-/* 400 */,
-/* 401 */,
-/* 402 */,
-/* 403 */,
-/* 404 */
-/*!**************************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/components/u-text/props.js ***!
-  \**************************************************************************************************/
+/* 454 */,
+/* 455 */,
+/* 456 */,
+/* 457 */,
+/* 458 */,
+/* 459 */,
+/* 460 */,
+/* 461 */
+/*!**********************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/components/u-safe-bottom/props.js ***!
+  \**********************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _default = {
+  props: {}
+};
+exports.default = _default;
+
+/***/ }),
+/* 462 */,
+/* 463 */,
+/* 464 */,
+/* 465 */,
+/* 466 */,
+/* 467 */,
+/* 468 */,
+/* 469 */
+/*!***********************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/components/u-loading-icon/props.js ***!
+  \***********************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uni) {
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _default = {
+  props: {
+    // 是否显示组件
+    show: {
+      type: Boolean,
+      default: uni.$u.props.loadingIcon.show
+    },
+    // 颜色
+    color: {
+      type: String,
+      default: uni.$u.props.loadingIcon.color
+    },
+    // 提示文字颜色
+    textColor: {
+      type: String,
+      default: uni.$u.props.loadingIcon.textColor
+    },
+    // 文字和图标是否垂直排列
+    vertical: {
+      type: Boolean,
+      default: uni.$u.props.loadingIcon.vertical
+    },
+    // 模式选择，circle-圆形，spinner-花朵形，semicircle-半圆形
+    mode: {
+      type: String,
+      default: uni.$u.props.loadingIcon.mode
+    },
+    // 图标大小，单位默认px
+    size: {
+      type: [String, Number],
+      default: uni.$u.props.loadingIcon.size
+    },
+    // 文字大小
+    textSize: {
+      type: [String, Number],
+      default: uni.$u.props.loadingIcon.textSize
+    },
+    // 文字内容
+    text: {
+      type: [String, Number],
+      default: uni.$u.props.loadingIcon.text
+    },
+    // 动画模式
+    timingFunction: {
+      type: String,
+      default: uni.$u.props.loadingIcon.timingFunction
+    },
+    // 动画执行周期时间
+    duration: {
+      type: [String, Number],
+      default: uni.$u.props.loadingIcon.duration
+    },
+    // mode=circle时的暗边颜色
+    inactiveColor: {
+      type: String,
+      default: uni.$u.props.loadingIcon.inactiveColor
+    }
+  }
+};
+exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
+
+/***/ }),
+/* 470 */,
+/* 471 */,
+/* 472 */,
+/* 473 */,
+/* 474 */,
+/* 475 */,
+/* 476 */,
+/* 477 */
+/*!***************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/components/u-line/props.js ***!
+  \***************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(uni) {
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var _default = {
+  props: {
+    color: {
+      type: String,
+      default: uni.$u.props.line.color
+    },
+    // 长度，竖向时表现为高度，横向时表现为长度，可以为百分比，带px单位的值等
+    length: {
+      type: [String, Number],
+      default: uni.$u.props.line.length
+    },
+    // 线条方向，col-竖向，row-横向
+    direction: {
+      type: String,
+      default: uni.$u.props.line.direction
+    },
+    // 是否显示细边框
+    hairline: {
+      type: Boolean,
+      default: uni.$u.props.line.hairline
+    },
+    // 线条与上下左右元素的间距，字符串形式，如"30px"、"20px 30px"
+    margin: {
+      type: [String, Number],
+      default: uni.$u.props.line.margin
+    },
+    // 是否虚线，true-虚线，false-实线
+    dashed: {
+      type: Boolean,
+      default: uni.$u.props.line.dashed
+    }
+  }
+};
+exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
+
+/***/ }),
+/* 478 */,
+/* 479 */,
+/* 480 */,
+/* 481 */,
+/* 482 */,
+/* 483 */,
+/* 484 */,
+/* 485 */,
+/* 486 */,
+/* 487 */,
+/* 488 */,
+/* 489 */,
+/* 490 */,
+/* 491 */,
+/* 492 */
+/*!***************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/components/u-text/props.js ***!
+  \***************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -21771,310 +22604,15 @@ exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 405 */,
-/* 406 */,
-/* 407 */,
-/* 408 */,
-/* 409 */,
-/* 410 */
-/*!**************************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/components/u-line/props.js ***!
-  \**************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-var _default = {
-  props: {
-    color: {
-      type: String,
-      default: uni.$u.props.line.color
-    },
-    // 长度，竖向时表现为高度，横向时表现为长度，可以为百分比，带px单位的值等
-    length: {
-      type: [String, Number],
-      default: uni.$u.props.line.length
-    },
-    // 线条方向，col-竖向，row-横向
-    direction: {
-      type: String,
-      default: uni.$u.props.line.direction
-    },
-    // 是否显示细边框
-    hairline: {
-      type: Boolean,
-      default: uni.$u.props.line.hairline
-    },
-    // 线条与上下左右元素的间距，字符串形式，如"30px"、"20px 30px"
-    margin: {
-      type: [String, Number],
-      default: uni.$u.props.line.margin
-    },
-    // 是否虚线，true-虚线，false-实线
-    dashed: {
-      type: Boolean,
-      default: uni.$u.props.line.dashed
-    }
-  }
-};
-exports.default = _default;
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
-
-/***/ }),
-/* 411 */,
-/* 412 */,
-/* 413 */,
-/* 414 */,
-/* 415 */,
-/* 416 */,
-/* 417 */,
-/* 418 */
-/*!**********************************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/components/u-loading-icon/props.js ***!
-  \**********************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-var _default = {
-  props: {
-    // 是否显示组件
-    show: {
-      type: Boolean,
-      default: uni.$u.props.loadingIcon.show
-    },
-    // 颜色
-    color: {
-      type: String,
-      default: uni.$u.props.loadingIcon.color
-    },
-    // 提示文字颜色
-    textColor: {
-      type: String,
-      default: uni.$u.props.loadingIcon.textColor
-    },
-    // 文字和图标是否垂直排列
-    vertical: {
-      type: Boolean,
-      default: uni.$u.props.loadingIcon.vertical
-    },
-    // 模式选择，circle-圆形，spinner-花朵形，semicircle-半圆形
-    mode: {
-      type: String,
-      default: uni.$u.props.loadingIcon.mode
-    },
-    // 图标大小，单位默认px
-    size: {
-      type: [String, Number],
-      default: uni.$u.props.loadingIcon.size
-    },
-    // 文字大小
-    textSize: {
-      type: [String, Number],
-      default: uni.$u.props.loadingIcon.textSize
-    },
-    // 文字内容
-    text: {
-      type: [String, Number],
-      default: uni.$u.props.loadingIcon.text
-    },
-    // 动画模式
-    timingFunction: {
-      type: String,
-      default: uni.$u.props.loadingIcon.timingFunction
-    },
-    // 动画执行周期时间
-    duration: {
-      type: [String, Number],
-      default: uni.$u.props.loadingIcon.duration
-    },
-    // mode=circle时的暗边颜色
-    inactiveColor: {
-      type: String,
-      default: uni.$u.props.loadingIcon.inactiveColor
-    }
-  }
-};
-exports.default = _default;
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
-
-/***/ }),
-/* 419 */,
-/* 420 */,
-/* 421 */,
-/* 422 */,
-/* 423 */,
-/* 424 */,
-/* 425 */,
-/* 426 */
-/*!***************************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/components/u-popup/props.js ***!
-  \***************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-var _default = {
-  props: {
-    // 是否展示弹窗
-    show: {
-      type: Boolean,
-      default: uni.$u.props.popup.show
-    },
-    // 是否显示遮罩
-    overlay: {
-      type: Boolean,
-      default: uni.$u.props.popup.overlay
-    },
-    // 弹出的方向，可选值为 top bottom right left center
-    mode: {
-      type: String,
-      default: uni.$u.props.popup.mode
-    },
-    // 动画时长，单位ms
-    duration: {
-      type: [String, Number],
-      default: uni.$u.props.popup.duration
-    },
-    // 是否显示关闭图标
-    closeable: {
-      type: Boolean,
-      default: uni.$u.props.popup.closeable
-    },
-    // 自定义遮罩的样式
-    overlayStyle: {
-      type: [Object, String],
-      default: uni.$u.props.popup.overlayStyle
-    },
-    // 点击遮罩是否关闭弹窗
-    closeOnClickOverlay: {
-      type: Boolean,
-      default: uni.$u.props.popup.closeOnClickOverlay
-    },
-    // 层级
-    zIndex: {
-      type: [String, Number],
-      default: uni.$u.props.popup.zIndex
-    },
-    // 是否为iPhoneX留出底部安全距离
-    safeAreaInsetBottom: {
-      type: Boolean,
-      default: uni.$u.props.popup.safeAreaInsetBottom
-    },
-    // 是否留出顶部安全距离（状态栏高度）
-    safeAreaInsetTop: {
-      type: Boolean,
-      default: uni.$u.props.popup.safeAreaInsetTop
-    },
-    // 自定义关闭图标位置，top-left为左上角，top-right为右上角，bottom-left为左下角，bottom-right为右下角
-    closeIconPos: {
-      type: String,
-      default: uni.$u.props.popup.closeIconPos
-    },
-    // 是否显示圆角
-    round: {
-      type: [Boolean, String, Number],
-      default: uni.$u.props.popup.round
-    },
-    // mode=center，也即中部弹出时，是否使用缩放模式
-    zoom: {
-      type: Boolean,
-      default: uni.$u.props.popup.zoom
-    },
-    // 弹窗背景色，设置为transparent可去除白色背景
-    bgColor: {
-      type: String,
-      default: uni.$u.props.popup.bgColor
-    },
-    // 遮罩的透明度，0-1之间
-    overlayOpacity: {
-      type: [Number, String],
-      default: uni.$u.props.popup.overlayOpacity
-    }
-  }
-};
-exports.default = _default;
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
-
-/***/ }),
-/* 427 */,
-/* 428 */,
-/* 429 */,
-/* 430 */,
-/* 431 */,
-/* 432 */,
-/* 433 */,
-/* 434 */
-/*!*****************************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/components/u-overlay/props.js ***!
-  \*****************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-var _default = {
-  props: {
-    // 是否显示遮罩
-    show: {
-      type: Boolean,
-      default: uni.$u.props.overlay.show
-    },
-    // 层级z-index
-    zIndex: {
-      type: [String, Number],
-      default: uni.$u.props.overlay.zIndex
-    },
-    // 遮罩的过渡时间，单位为ms
-    duration: {
-      type: [String, Number],
-      default: uni.$u.props.overlay.duration
-    },
-    // 不透明度值，当做rgba的第四个参数
-    opacity: {
-      type: [String, Number],
-      default: uni.$u.props.overlay.opacity
-    }
-  }
-};
-exports.default = _default;
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
-
-/***/ }),
-/* 435 */,
-/* 436 */,
-/* 437 */,
-/* 438 */,
-/* 439 */,
-/* 440 */,
-/* 441 */,
-/* 442 */
-/*!*************************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/components/u-gap/props.js ***!
-  \*************************************************************************************************/
+/* 493 */,
+/* 494 */,
+/* 495 */,
+/* 496 */,
+/* 497 */,
+/* 498 */
+/*!**************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/components/u-gap/props.js ***!
+  \**************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -22113,44 +22651,17 @@ exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 443 */,
-/* 444 */,
-/* 445 */,
-/* 446 */,
-/* 447 */,
-/* 448 */,
-/* 449 */,
-/* 450 */
-/*!*********************************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/components/u-safe-bottom/props.js ***!
-  \*********************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-var _default = {
-  props: {}
-};
-exports.default = _default;
-
-/***/ }),
-/* 451 */,
-/* 452 */,
-/* 453 */,
-/* 454 */,
-/* 455 */,
-/* 456 */,
-/* 457 */,
-/* 458 */
-/*!**************************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/components/u-text/value.js ***!
-  \**************************************************************************************************/
+/* 499 */,
+/* 500 */,
+/* 501 */,
+/* 502 */,
+/* 503 */,
+/* 504 */,
+/* 505 */,
+/* 506 */
+/*!***************************************************************************************************************!*\
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/components/u-text/value.js ***!
+  \***************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -22255,401 +22766,17 @@ exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
 
 /***/ }),
-/* 459 */,
-/* 460 */,
-/* 461 */,
-/* 462 */,
-/* 463 */,
-/* 464 */,
-/* 465 */,
-/* 466 */
-/*!********************************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/components/u-transition/props.js ***!
-  \********************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-var _default = {
-  props: {
-    // 是否展示组件
-    show: {
-      type: Boolean,
-      default: uni.$u.props.transition.show
-    },
-    // 使用的动画模式
-    mode: {
-      type: String,
-      default: uni.$u.props.transition.mode
-    },
-    // 动画的执行时间，单位ms
-    duration: {
-      type: [String, Number],
-      default: uni.$u.props.transition.duration
-    },
-    // 使用的动画过渡函数
-    timingFunction: {
-      type: String,
-      default: uni.$u.props.transition.timingFunction
-    }
-  }
-};
-exports.default = _default;
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
-
-/***/ }),
-/* 467 */
-/*!*************************************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/components/u-transition/transition.js ***!
-  \*************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ 4);
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-var _regenerator = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/regenerator */ 49));
-var _asyncToGenerator2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/asyncToGenerator */ 51));
-var _nvueAniMap = _interopRequireDefault(__webpack_require__(/*! ./nvue.ani-map.js */ 468));
-// 定义一个一定时间后自动成功的promise，让调用nextTick方法处，进入下一个then方法
-var nextTick = function nextTick() {
-  return new Promise(function (resolve) {
-    return setTimeout(resolve, 1000 / 50);
-  });
-};
-// nvue动画模块实现细节抽离在外部文件
-
-// 定义类名，通过给元素动态切换类名，赋予元素一定的css动画样式
-var getClassNames = function getClassNames(name) {
-  return {
-    enter: "u-".concat(name, "-enter u-").concat(name, "-enter-active"),
-    'enter-to': "u-".concat(name, "-enter-to u-").concat(name, "-enter-active"),
-    leave: "u-".concat(name, "-leave u-").concat(name, "-leave-active"),
-    'leave-to': "u-".concat(name, "-leave-to u-").concat(name, "-leave-active")
-  };
-};
-var _default = {
-  methods: {
-    // 组件被点击发出事件
-    clickHandler: function clickHandler() {
-      this.$emit('click');
-    },
-    // vue版本的组件进场处理
-    vueEnter: function vueEnter() {
-      var _this = this;
-      // 动画进入时的类名
-      var classNames = getClassNames(this.mode);
-      // 定义状态和发出动画进入前事件
-      this.status = 'enter';
-      this.$emit('beforeEnter');
-      this.inited = true;
-      this.display = true;
-      this.classes = classNames.enter;
-      this.$nextTick( /*#__PURE__*/(0, _asyncToGenerator2.default)( /*#__PURE__*/_regenerator.default.mark(function _callee() {
-        return _regenerator.default.wrap(function _callee$(_context) {
-          while (1) {
-            switch (_context.prev = _context.next) {
-              case 0:
-                // 标识动画尚未结束
-                _this.$emit('enter');
-                _this.transitionEnded = false;
-                // 组件动画进入后触发的事件
-                _this.$emit('afterEnter');
-                // 赋予组件enter-to类名
-                _this.classes = classNames['enter-to'];
-              case 4:
-              case "end":
-                return _context.stop();
-            }
-          }
-        }, _callee);
-      })));
-    },
-    // 动画离场处理
-    vueLeave: function vueLeave() {
-      var _this2 = this;
-      // 如果不是展示状态，无需执行逻辑
-      if (!this.display) return;
-      var classNames = getClassNames(this.mode);
-      // 标记离开状态和发出事件
-      this.status = 'leave';
-      this.$emit('beforeLeave');
-      // 获得类名
-      this.classes = classNames.leave;
-      this.$nextTick(function () {
-        // 动画正在离场的状态
-        _this2.transitionEnded = false;
-        _this2.$emit('leave');
-        // 组件执行动画，到了执行的执行时间后，执行一些额外处理
-        setTimeout(_this2.onTransitionEnd, _this2.duration);
-        _this2.classes = classNames['leave-to'];
-      });
-    },
-    // 完成过渡后触发
-    onTransitionEnd: function onTransitionEnd() {
-      // 如果已经是结束的状态，无需再处理
-      if (this.transitionEnded) return;
-      this.transitionEnded = true;
-      // 发出组件动画执行后的事件
-      this.$emit(this.status === 'leave' ? 'afterLeave' : 'afterEnter');
-      if (!this.show && this.display) {
-        this.display = false;
-        this.inited = false;
-      }
-    }
-  }
-};
-exports.default = _default;
-
-/***/ }),
-/* 468 */
+/* 507 */,
+/* 508 */,
+/* 509 */,
+/* 510 */,
+/* 511 */,
+/* 512 */,
+/* 513 */,
+/* 514 */
 /*!***************************************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/components/u-transition/nvue.ani-map.js ***!
+  !*** C:/Users/Administrator/Desktop/playwithpartner/uni/pwbb/uni_modules/uview-ui/components/u-link/props.js ***!
   \***************************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-var _default = {
-  fade: {
-    enter: {
-      opacity: 0
-    },
-    'enter-to': {
-      opacity: 1
-    },
-    leave: {
-      opacity: 1
-    },
-    'leave-to': {
-      opacity: 0
-    }
-  },
-  'fade-up': {
-    enter: {
-      opacity: 0,
-      transform: 'translateY(100%)'
-    },
-    'enter-to': {
-      opacity: 1,
-      transform: 'translateY(0)'
-    },
-    leave: {
-      opacity: 1,
-      transform: 'translateY(0)'
-    },
-    'leave-to': {
-      opacity: 0,
-      transform: 'translateY(100%)'
-    }
-  },
-  'fade-down': {
-    enter: {
-      opacity: 0,
-      transform: 'translateY(-100%)'
-    },
-    'enter-to': {
-      opacity: 1,
-      transform: 'translateY(0)'
-    },
-    leave: {
-      opacity: 1,
-      transform: 'translateY(0)'
-    },
-    'leave-to': {
-      opacity: 0,
-      transform: 'translateY(-100%)'
-    }
-  },
-  'fade-left': {
-    enter: {
-      opacity: 0,
-      transform: 'translateX(-100%)'
-    },
-    'enter-to': {
-      opacity: 1,
-      transform: 'translateY(0)'
-    },
-    leave: {
-      opacity: 1,
-      transform: 'translateY(0)'
-    },
-    'leave-to': {
-      opacity: 0,
-      transform: 'translateX(-100%)'
-    }
-  },
-  'fade-right': {
-    enter: {
-      opacity: 0,
-      transform: 'translateX(100%)'
-    },
-    'enter-to': {
-      opacity: 1,
-      transform: 'translateY(0)'
-    },
-    leave: {
-      opacity: 1,
-      transform: 'translateY(0)'
-    },
-    'leave-to': {
-      opacity: 0,
-      transform: 'translateX(100%)'
-    }
-  },
-  'slide-up': {
-    enter: {
-      transform: 'translateY(100%)'
-    },
-    'enter-to': {
-      transform: 'translateY(0)'
-    },
-    leave: {
-      transform: 'translateY(0)'
-    },
-    'leave-to': {
-      transform: 'translateY(100%)'
-    }
-  },
-  'slide-down': {
-    enter: {
-      transform: 'translateY(-100%)'
-    },
-    'enter-to': {
-      transform: 'translateY(0)'
-    },
-    leave: {
-      transform: 'translateY(0)'
-    },
-    'leave-to': {
-      transform: 'translateY(-100%)'
-    }
-  },
-  'slide-left': {
-    enter: {
-      transform: 'translateX(-100%)'
-    },
-    'enter-to': {
-      transform: 'translateY(0)'
-    },
-    leave: {
-      transform: 'translateY(0)'
-    },
-    'leave-to': {
-      transform: 'translateX(-100%)'
-    }
-  },
-  'slide-right': {
-    enter: {
-      transform: 'translateX(100%)'
-    },
-    'enter-to': {
-      transform: 'translateY(0)'
-    },
-    leave: {
-      transform: 'translateY(0)'
-    },
-    'leave-to': {
-      transform: 'translateX(100%)'
-    }
-  },
-  zoom: {
-    enter: {
-      transform: 'scale(0.95)'
-    },
-    'enter-to': {
-      transform: 'scale(1)'
-    },
-    leave: {
-      transform: 'scale(1)'
-    },
-    'leave-to': {
-      transform: 'scale(0.95)'
-    }
-  },
-  'fade-zoom': {
-    enter: {
-      opacity: 0,
-      transform: 'scale(0.95)'
-    },
-    'enter-to': {
-      opacity: 1,
-      transform: 'scale(1)'
-    },
-    leave: {
-      opacity: 1,
-      transform: 'scale(1)'
-    },
-    'leave-to': {
-      opacity: 0,
-      transform: 'scale(0.95)'
-    }
-  }
-};
-exports.default = _default;
-
-/***/ }),
-/* 469 */,
-/* 470 */,
-/* 471 */,
-/* 472 */,
-/* 473 */,
-/* 474 */,
-/* 475 */,
-/* 476 */
-/*!********************************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/components/u-status-bar/props.js ***!
-  \********************************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.default = void 0;
-var _default = {
-  props: {
-    bgColor: {
-      type: String,
-      default: uni.$u.props.statusBar.bgColor
-    }
-  }
-};
-exports.default = _default;
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 2)["default"]))
-
-/***/ }),
-/* 477 */,
-/* 478 */,
-/* 479 */,
-/* 480 */,
-/* 481 */,
-/* 482 */,
-/* 483 */,
-/* 484 */
-/*!**************************************************************************************************!*\
-  !*** C:/Users/24146/Desktop/pwbb/pwbb1/uni/pwbb/uni_modules/uview-ui/components/u-link/props.js ***!
-  \**************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 

@@ -6,6 +6,10 @@
     "uni-grid": "/uni_modules/uni-grid/components/uni-grid/uni-grid",
     "uni-grid-item": "/uni_modules/uni-grid/components/uni-grid-item/uni-grid-item",
     "u-tabs": "/uni_modules/uview-ui/components/u-tabs/u-tabs",
-    "tabbar": "/components/tabbar/tabbar"
+    "tabbar": "/components/tabbar/tabbar",
+    "u-popup": "/uni_modules/uview-ui/components/u-popup/u-popup",
+    "u-button": "/uni_modules/uview-ui/components/u-button/u-button",
+    "u-modal": "/uni_modules/uview-ui/components/u-modal/u-modal",
+    "u-tag": "/uni_modules/uview-ui/components/u-tag/u-tag"
   }
 }

@@ -1,41 +1,54 @@
-const Koa = require('koa');
-const fs = require('fs-extra');
-const path = require('path');
+const Koa = require("koa");
+const fs = require("fs-extra");
+const path = require("path");
 const app = new Koa();
-const views = require('koa-views');
-const json = require('koa-json');
-const onerror = require('koa-onerror');
-const bodyparser = require('koa-bodyparser');
-const logger = require('koa-logger');
-const sequelize = require('./db');
-const cors = require('koa2-cors'); // 引入 koa2-cors 中间件
-
+const views = require("koa-views");
+const json = require("koa-json");
+const onerror = require("koa-onerror");
+const bodyparser = require("koa-bodyparser");
+const logger = require("koa-logger");
+const sequelize = require("./db");
+const cors = require("koa2-cors"); // 引入 koa2-cors 中间件
+const jwt = require("jsonwebtoken");
+const koaJwt = require("koa-jwt");
+const secret = "ojdflajdfljadf";
 // Error handler
 onerror(app);
 
 // 添加跨域支持
-app.use(cors({
-  origin: '*', // 允许所有域名请求，如果只允许特定域名可以修改为具体的域名
-  allowMethods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'], // 允许的方法
-  allowHeaders: ['Origin', 'X-Requested-With', 'Content-Type', 'Accept'], // 允许的头部
-  credentials: true // 允许发送 cookie
-}));
+app.use(
+  cors({
+    origin: "*", // 允许所有域名请求，如果只允许特定域名可以修改为具体的域名
+    allowMethods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"], // 允许的方法
+    allowHeaders: ["Origin", "X-Requested-With", "Content-Type", "Accept"], // 允许的头部
+    credentials: true, // 允许发送 cookie
+  })
+);
+
+app.use(
+  koaJwt({ secret }).unless({
+    path: [/^\/*/],
+  })
+);
 
 sequelize.sync().then(() => {
-  console.log('Database synced');
+  console.log("Database synced");
 });
 // Middlewares
-app.use(bodyparser({
-  enableTypes: ['json', 'form', 'text']
-}));
+app.use(
+  bodyparser({
+    enableTypes: ["json", "form", "text"],
+  })
+);
 app.use(json());
 app.use(logger());
-app.use(require('koa-static')(path.join(__dirname, 'public')));
+app.use(require("koa-static")(path.join(__dirname, "public")));
 
-
-app.use(views(path.join(__dirname, 'views'), {
-  extension: 'pug'
-}));
+app.use(
+  views(path.join(__dirname, "views"), {
+    extension: "pug",
+  })
+);
 
 // Logger
 app.use(async (ctx, next) => {
@@ -46,9 +59,9 @@ app.use(async (ctx, next) => {
 });
 
 // Dynamically load and use routes
-const routesPath = path.join(__dirname, 'routes');
-fs.readdirSync(routesPath).forEach(file => {
-  if (file.endsWith('.js')) {
+const routesPath = path.join(__dirname, "routes");
+fs.readdirSync(routesPath).forEach((file) => {
+  if (file.endsWith(".js")) {
     const route = require(path.join(routesPath, file));
     app.use(route.routes());
     app.use(route.allowedMethods());
@@ -56,8 +69,8 @@ fs.readdirSync(routesPath).forEach(file => {
 });
 
 // Error-handling
-app.on('error', (err, ctx) => {
-  console.error('server error', err, ctx);
+app.on("error", (err, ctx) => {
+  console.error("server error", err, ctx);
 });
 
 module.exports = app;

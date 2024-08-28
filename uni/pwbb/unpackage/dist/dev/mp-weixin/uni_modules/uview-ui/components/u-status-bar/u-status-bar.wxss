@@ -242,9 +242,6 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-.safe-navbar.data-v-124d52a9 {
-  padding-top: 25px;
-}
 .u-status-bar.data-v-124d52a9 {
   width: 100%;
 }

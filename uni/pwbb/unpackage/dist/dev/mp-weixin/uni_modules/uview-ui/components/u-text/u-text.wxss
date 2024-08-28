@@ -242,9 +242,6 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-.safe-navbar.data-v-50004b49 {
-  padding-top: 25px;
-}
 view.data-v-50004b49, scroll-view.data-v-50004b49, swiper-item.data-v-50004b49 {
   display: flex;
   flex-direction: column;

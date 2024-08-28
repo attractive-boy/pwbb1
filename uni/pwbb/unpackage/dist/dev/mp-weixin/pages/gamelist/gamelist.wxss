@@ -1,0 +1,31 @@
+
+.game-list {
+    margin: 3vw;
+	padding: 3vw;
+    border-radius: 2vw;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.grid-item {
+    margin-bottom: 2vw;
+    text-align: center;
+}
+.game-icon {
+    width: 18vw;
+    height: 18vw;
+    object-fit: cover;
+}
+.game-name {
+    display: block;
+    margin-top: 5px;
+    font-size: 14px;
+    color: #333;
+}
+.game-list-title{
+	font-size: 5vw;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 5vw;
+	display: block;
+}
+

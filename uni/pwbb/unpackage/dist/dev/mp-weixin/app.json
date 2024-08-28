@@ -5,7 +5,9 @@
     "pages/discover/discover",
     "pages/login/login",
     "pages/messages/messages",
-    "pages/search/search"
+    "pages/search/search",
+    "pages/gamelist/gamelist",
+    "pages/gameinfo/gameinfo"
   ],
   "subPackages": [],
   "window": {

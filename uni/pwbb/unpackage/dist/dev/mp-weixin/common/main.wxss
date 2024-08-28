@@ -258,9 +258,6 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-.safe-navbar {
-  padding-top: 25px;
-}
 /*每个页面公共css */
 /* 水平间距 */
 .uni-border {

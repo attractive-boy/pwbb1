@@ -33,6 +33,27 @@
     	{
     		"navigationBarTitleText" : ""
     	}
+    },
+    {
+    	"path" : "pages/gamelist/gamelist",
+    	"style" : 
+    	{
+    		"navigationBarTitleText" : "游戏列表"
+    	}
+    },
+    {
+    	"path" : "pages/gameinfo/gameinfo",
+    	"style" : 
+    	{
+    		"navigationBarTitleText" : ""
+    	}
+    },
+    {
+    	"path" : "pages/userinfo/userinfo",
+    	"style" : 
+    	{
+    		"navigationBarTitleText" : ""
+    	}
     }
   ],
   "tabBar": {

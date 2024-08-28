@@ -13,4 +13,19 @@ router.get('/games', async (ctx) => {
   }
 });
 
+//根据id获取游戏
+router.get('/games/:id', async (ctx) => {
+  try {
+    const game = await GameList.findByPk(ctx.params.id);
+    if (!game) {
+      ctx.status = 404;
+      ctx.body = { error: 'Game not found.' };
+    } else {
+      ctx.body = game;
+    }
+  } catch (error) {
+    console.error('Error fetching game:', error);
+  }
+})
+
 module.exports = router;

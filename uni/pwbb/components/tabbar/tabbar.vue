@@ -33,14 +33,14 @@
 
 <script>
 	export default {
-		data() {
-			return {
-				currentTab: 0
-			};
+		props: {
+			currentTab: {
+				type: Number,
+				default: 0
+			}
 		},
 		methods: {
 			handleTabChange(index) {
-				this.currentTab = index;
 				const tabPaths = [
 					'/pages/index/index',
 					'/pages/discover/discover',
@@ -48,33 +48,9 @@
 					'/pages/profile/profile'
 				];
 				uni.switchTab({
-					url: tabPaths[index],
-					success(res) {
-						this.changeCurrentTab();
-					}
+					url: tabPaths[index]
 				});
 			},
-			changeCurrentTab(){
-				uni.getSystemInfo({
-					success: (res) => {
-						const pages = getCurrentPages();
-						const currentPage = pages[pages.length - 1];
-						const url = currentPage.route;
-						const tabPaths = [
-							'/pages/index/index',
-							'/pages/discover/discover',
-							'/pages/messages/messages',
-							'/pages/profile/profile'
-						];
-						console.log('tabbar加载==>', url);
-						this.currentTab = tabPaths.indexOf('/' + url);
-					}
-				});
-			}
-		},
-		
-		mounted() {
-			this.changeCurrentTab();
 		}
 	};
 </script>

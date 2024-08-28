@@ -2,20 +2,17 @@
 @import "@/uni_modules/uview-ui/theme.scss";  
 @import "@/uni_modules/uview-ui/index.scss";
 
+/* 在线链接服务仅供平台体验和调试使用，平台不承诺服务的稳定性，企业客户需下载字体包自行发布使用并做好备份。 */
 @font-face {
   font-family: 'eosfont';  /* Project id 4648096 */
-  src: url('//at.alicdn.com/t/c/font_4648096_guu8ekmotpg.woff2?t=1723823253223') format('woff2'),
-       url('//at.alicdn.com/t/c/font_4648096_guu8ekmotpg.woff?t=1723823253223') format('woff'),
-       url('//at.alicdn.com/t/c/font_4648096_guu8ekmotpg.ttf?t=1723823253223') format('truetype');
+  src: url('//at.alicdn.com/t/c/font_4648096_9bpmn4o2arh.woff2?t=1724842218444') format('woff2'),
+       url('//at.alicdn.com/t/c/font_4648096_9bpmn4o2arh.woff?t=1724842218444') format('woff'),
+       url('//at.alicdn.com/t/c/font_4648096_9bpmn4o2arh.ttf?t=1724842218444') format('truetype');
 }
-
 .eosfont {
   font-family:"eosfont" !important;
   font-size:16px;
   font-style:normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-.safe-navbar{
-	padding-top: var(--status-bar-height);
 }

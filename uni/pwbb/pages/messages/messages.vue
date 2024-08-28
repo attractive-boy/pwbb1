@@ -62,7 +62,7 @@
 		</view>
 
 		<!-- 自定义TabBar -->
-		<tabbar></tabbar>
+		<tabbar :currentTab="2"></tabbar>
 	</view>
 </template>
 
