@@ -27,19 +27,19 @@ const form = ref({
   password: ''
 });
 
-const title = ref("视频图像处理小程序管理平台");
+const title = ref("陪玩报备管理平台");
 
 const { proxy } = getCurrentInstance()
 
 // 登录方法
 const login = async () => {
   try {
-    const response = await proxy.$http.post('/user/manager/login', form.value);
+    const response = await proxy.$http.post('/admin/login', form.value);
     //本地存储token
-    localStorage.setItem('token', response.data.access_token);
+    localStorage.setItem('token', response.data.token);
     console.log(response);
     ElMessage.success('登录成功');
-    router.push('/AEManagement');
+    router.push('/gamelist');
   } catch (error) {
     ElMessage.error(error || '登录失败');
   }

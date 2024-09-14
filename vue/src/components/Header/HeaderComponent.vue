@@ -13,11 +13,11 @@
 </template>
 
 <script setup >
-import { ref, shallowRef, onMounted, onBeforeUnmount, watch } from 'vue'
+import { ref, onMounted, watch } from 'vue'
 import { useRouter } from 'vue-router'
 
 const router = useRouter()
-const title = ref('视频图像处理小程序管理平台')
+const title = ref('陪玩报备管理平台')
 const activeIndex = ref('')
 
 watch(

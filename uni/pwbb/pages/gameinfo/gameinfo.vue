@@ -76,14 +76,14 @@
 				</view>
 			</u-overlay>
 		</view>
-		<view @scroll="onScroll" :scroll-y="true" style="overflow-y: scroll; height: 80vh;" >
+		<view @scroll="onScroll" :scroll-y="true" style="overflow-y: scroll; height: 80vh;">
 			<view class="gameinfo-view-quick">
 				<u-button class="gameinfo-down-one">快速下单<uni-icons fontFamily="eosfont" :size="26"
 						color="#fff">{{'&#xe8b6;'}}</uni-icons></u-button>
 				<text class="gameinfo-down-one-text">给在线能立即接单的陪练发送抢单提醒</text>
 			</view>
 			<view class="gameinfo-user-list">
-				<view v-for="(item,index) in list" :key="index" class="gameinfo-item">
+				<view v-for="(item,index) in list" :key="index" class="gameinfo-item" @click="toUserProfile(item.id)">
 					<view class="gameinfo-item-left">
 						<view class="avatar-frame">
 							<image class="gameinfo-item-left-image" :src="item.avatar"></image>
@@ -116,15 +116,16 @@
 						<view class="gameinfo-item-right-info-bottom">
 							<view class="gameinfo-item-right-info-onlinetime">
 								<uni-icons fontFamily="eosfont" :size="26" color="#333">{{'&#xe65f;'}}</uni-icons>
-								
+
 								<text style="margin-left: 1vw;">{{convertTime(item.worktime)}} - {{convertTime(item.offtime)}}</text>
 							</view>
 							<view style="display: flex; flex-direction: row; align-items: center;">
-							<view v-if="order == 3" class="gameinfo-item-right-info-backrate">回头率: {{item.lately_turnback_rate / 100}} %
-							</view>
-							<view v-else class="gameinfo-item-right-info-backrate">{{formatExp(item.exp)}} 热度
-							</view>
-							<u-button class="gameinfo-item-right-info-btn" color="#89c284">下单</u-button>
+								<view v-if="order == 3" class="gameinfo-item-right-info-backrate">回头率:
+									{{item.lately_turnback_rate / 100}} %
+								</view>
+								<view v-else class="gameinfo-item-right-info-backrate">{{formatExp(item.exp)}} 热度
+								</view>
+								<u-button class="gameinfo-item-right-info-btn" color="#89c284">下单</u-button>
 							</view>
 						</view>
 					</view>
@@ -259,6 +260,11 @@
 					return value;
 				}
 			},
+			toUserProfile(id) {
+				uni.navigateTo({
+					url: `/pages/userinfo/userinfo?id=${id}`,
+				});
+			}
 		},
 		//读取参数 设置标题
 		async onLoad(options) {
@@ -269,13 +275,12 @@
 			});
 			this.gameName = res.name;
 			this.type = gameid;
-		
+
 			// 初始化加载
 			this.loadMore();
-		
+
 		}
 	}
-	
 </script>
 
 <style>
@@ -292,7 +297,7 @@
 		margin-left: 2vw;
 	}
 
-	.profile-view-money { 
+	.profile-view-money {
 		margin-right: 2vw;
 	}
 
@@ -514,24 +519,28 @@
 		overflow: hidden;
 		text-overflow: ellipsis;
 	}
-	.gameinfo-item-right-info-bottom{
+
+	.gameinfo-item-right-info-bottom {
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
 		align-items: center;
 		width: 70vw;
 	}
-	.gameinfo-item-right-info-btn{
+
+	.gameinfo-item-right-info-btn {
 		width: 11vw;
 		color: white;
 		font-weight: 800;
 		border-radius: 1vw;
 		margin-left: 1vw;
 	}
-	.gameinfo-item-right-info-backrate{
-		color:#ccc;
+
+	.gameinfo-item-right-info-backrate {
+		color: #ccc;
 	}
-	.gameinfo-item-right-info-onlinetime{
+
+	.gameinfo-item-right-info-onlinetime {
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;

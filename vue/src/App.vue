@@ -1,5 +1,7 @@
 <template>
   <el-container>
+    <!-- 设置 norefrer -->
+    <meta name="referrer" content="no-referrer" />
     <el-header class="header-container">
       <HeaderComponent />
     </el-header>

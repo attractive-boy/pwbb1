@@ -52,7 +52,7 @@
     	"path" : "pages/userinfo/userinfo",
     	"style" : 
     	{
-    		"navigationBarTitleText" : ""
+    		"navigationStyle": "custom"
     	}
     }
   ],

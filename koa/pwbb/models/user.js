@@ -1,6 +1,6 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../db'); // 导入 Sequelize 实例
-
+const UserVoice = require('./UserVoice'); // 导入 UserVoice 模型
 class User extends Model {}
 
 User.init({
@@ -171,5 +171,8 @@ User.init({
   tableName: 'users', // Adjust to your table name
   timestamps: false // Set to true if using createdAt and updatedAt
 });
+
+User.hasOne(UserVoice, { foreignKey: 'user_id' });
+UserVoice.belongsTo(User, { foreignKey: 'user_id' });
 
 module.exports = User;

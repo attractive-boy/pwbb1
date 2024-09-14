@@ -1,5 +1,5 @@
 export default {
-  title: 'AEP模板管理',
+  title: '游戏设置',
   orderNum: 1,
   keepAlive: true
 }

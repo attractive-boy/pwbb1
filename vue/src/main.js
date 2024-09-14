@@ -11,8 +11,12 @@ import * as ElementPlusIconsVue from '@element-plus/icons-vue'
 import axiosPlugin from './plugins/axios'
 import eventBus from 'vue3-eventbus'
 
-const app = createApp(App)
 
+
+const app = createApp(App)
+for (const name in ElementPlusIconsVue) {
+  app.component(name, ElementPlusIconsVue[name])
+}
 setupRouter(app)
 app.use(createPinia())
 app.use(eventBus)

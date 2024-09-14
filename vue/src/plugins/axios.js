@@ -1,8 +1,7 @@
 import axios from 'axios'
 import { router } from '@/router/index'
 
-const baseURL = 'https://gongjiangkeji.top/flask/api'
-const staticBaseURL = 'https://gongjiangkeji.top/flask/'
+const baseURL = 'http://localhost:3000'
 
 axios.defaults.withCredentials=true
 
@@ -30,4 +29,4 @@ export default {
   }
 }
 
-export { baseURL,staticBaseURL }
+export { baseURL }

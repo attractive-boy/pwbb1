@@ -19,7 +19,7 @@ const routes = routeModules.keys().map((key) => {
 // 添加默认路由
 routes.push({
   path: '/',
-  redirect: '/Login' // 这里将默认路由重定向到您指定的首页路径
+  redirect: '/login' // 这里将默认路由重定向到您指定的首页路径
 })
 
 export const router = createRouter({

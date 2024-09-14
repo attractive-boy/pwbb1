@@ -1,5 +1,8 @@
 const { Sequelize, DataTypes } = require('sequelize');
 const sequelize = require('../db');
+const GamelistLv = require('./gamelistLv'); // 子表模型 1
+const GamelistTaskLimit = require('./gamelistTaskLimit'); // 子表模型 2
+const GamelistVerifyWay = require('./gamelistVerifyWay');
 
 // Define GameList model
 const GameList = sequelize.define('GameList', {
@@ -94,5 +97,12 @@ const GameList = sequelize.define('GameList', {
   tableName: 'GameList',
   timestamps: false,
 });
+GameList.hasMany(GamelistLv, { foreignKey: 'gamelist_id' });
+GameList.hasMany(GamelistTaskLimit, { foreignKey: 'gamelist_id' });
+GameList.hasMany(GamelistVerifyWay, { foreignKey: 'gamelist_id' });
+
+GamelistLv.belongsTo(GameList, { foreignKey: 'gamelist_id' });
+GamelistTaskLimit.belongsTo(GameList, { foreignKey: 'gamelist_id' });
+GamelistVerifyWay.belongsTo(GameList, { foreignKey: 'gamelist_id' });
 
 module.exports = GameList;

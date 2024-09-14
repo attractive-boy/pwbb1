@@ -1,5 +1,5 @@
 export default {
-  title: '授权管理',
+  title: '轮播图',
   orderNum: 3,
   keepAlive: true
 }
